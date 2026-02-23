@@ -1,0 +1,56 @@
+.hero {
+  min-height: 512px;
+  margin-top: 109px;
+  margin-bottom: 178px;
+  position: relative;
+  overflow: visible;
+  overflow-x: clip;
+}
+
+.hero-container {
+  position: relative;
+  overflow: visible;
+  max-width: var(--container-third);
+  padding-inline: var(--header-padding-x);
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-container::after {
+  content: "";
+  position: absolute;
+  top: -42%;
+  left: 642px;
+  width: 806px;
+  height: 761px;
+  background: url("/images/joy_stick.png") no-repeat;
+  background-size: contain;
+}
+
+.hero-content {
+  max-width: 527px;
+}
+
+.hero-label {
+  margin-bottom: 17px;
+  font-weight: 700;
+  color: var(--orange-700);
+  font-size: 20px;
+  line-height: 155%;
+}
+
+.hero-title {
+  font-size: clamp(32px, calc(1.1rem + 2.2vw), 50px);
+  font-weight: 700;
+  line-height: 155%;
+  margin-bottom: 26px;
+}
+
+.hero-description {
+  max-width: 527px;
+  line-height: 200%;
+  font-weight: 500;
+  margin-bottom: 50px;
+}

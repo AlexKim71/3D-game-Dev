@@ -1,0 +1,49 @@
+
+.main-nav__link:focus,
+.header-logo:focus,
+.contact-us:focus {
+  outline: none;
+}
+
+
+
+/*Навигация по меню шапки спомощью Tab+Shift(Для Доступности)*/
+.main-nav__link:focus-visible,
+.header-logo:focus-visible,
+.contact-us:focus-visible {
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
+}
+/*Навигация по меню шапки спомощью Tab+Shift(Для Доступности)*/
+
+
+
+
+
+
+/*При нажатии на эти элементы отрабатывает эффект*/
+.main-nav__link:active {
+  color: #CECECE;  
+}
+
+.contact-us:active {
+  background-color: var(--hover-btn-effect);
+}
+
+.hamburger:active {
+  opacity: 0.7;
+}
+
+.footer-copyright:active {
+  color: var(--orange-700);
+}
+
+.footer-soc1als-link:active svg path,
+.footer-soc1als-link:active {
+  fill: var(--white);
+  background-color: var(--orange-700);
+}
+
+/*При нажатии на эти элементы отрабатывает эффект*/
+
+

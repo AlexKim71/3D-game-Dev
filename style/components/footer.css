@@ -1,0 +1,128 @@
+
+.footer-extra {
+  border-top: var(--border-light-gray);
+  text-align: center;
+  padding-block: 29px;
+  font-size: 13px;
+}
+
+.footer-container {
+  max-width: calc(var(--footer-container) + var(--footer-padding-x) * 2);
+  padding-inline: var(--footer-padding-x);
+  display: flex;
+  justify-content: space-between;
+  min-height: 161px;
+  margin: 73px auto 53px auto;
+}
+
+.footer-column-title + nav > ul > li {
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.footer-column-title + nav > ul {
+  margin-top: 16px;
+}
+
+
+.footer-description {
+  max-width: 372px;
+  margin: 15px 0 25px 0;
+}
+
+.footer-contact-info {
+  max-width: 282px;
+  margin-bottom: 26px;
+  margin-top: 20px;
+  hyphens: auto;
+}
+
+.footer-contact-info + a:hover {
+  color: var(--orange-700);
+}
+
+.footer-soc1als-link svg path  {
+  fill: var(--black-800);
+}
+
+.footer-soc1als {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-soc1als-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-soc1als-list > li:not(:last-child) {
+  margin-right: 16px;
+  
+}
+
+.footer-soc1als-link svg {
+  position: absolute;
+  left: 33%;
+  bottom: 30%;
+  width: 13px;
+  height: 13px;
+}
+
+.footer-soc1als-link {
+  position: relative;
+  aspect-ratio: 1;
+  width: 34px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.footer-column {
+  padding-block: 0 !important;
+}
+
+.footer-column > h2 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+
+.footer-header {
+  margin-right: 78px;
+}
+
+.footer-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-column:not(:last-child) {
+  margin-right: clamp(2.438rem, -2.068rem + 9.24vw, 6.25rem);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Отедельные размеры для каждой иконки svg socials */
+.footer-soc1als-link[title*=Facebook] > svg {
+  width: 12px;
+  aspect-ratio: 1;
+}
+
+.footer-soc1als-link[title*=Twitter] > svg {
+  width: 13px;
+  height: 11px;
+}
+
+.footer-soc1als-link[title*=Instagram] > svg {
+  width: 13px;
+  aspect-ratio: 1;
+}
+
+.footer-soc1als-link[title*=linkedIn] > svg {
+  width: 11px;
+  aspect-ratio: 1;
+}
+/* Отедельные размеры для каждой иконки svg socials */

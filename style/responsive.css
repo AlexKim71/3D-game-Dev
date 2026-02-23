@@ -1,0 +1,186 @@
+/*Чтобы на Тач Устройствах не отрабатывал :hover(эффект наведение)*/
+@media (any-hover: hover) {
+
+  .btn-1:hover {
+    background-color: var(--hover-btn-effect);
+  }
+
+  .btn-squarse:hover {
+    background-color: var(--hover-btn-effect);
+  }
+
+  .footer-soc1als-link:hover svg path,
+  .footer-soc1als-link:hover {
+    fill: var(--white);
+    background-color: var(--orange-700);
+  }
+  
+  .main-nav__link:hover::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    bottom: -9px;
+
+    width: 31px;
+    height: 4px;
+
+    background-color: var(--orange-700);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-duration);
+  }
+
+  .main-nav__link:hover::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    bottom: -9px;
+    width: 5px;
+    height: 4px;
+    background-color: var(--orange-700);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-duration);
+  }
+
+  .contact-us:hover {
+    background-color: var(--hover-btn-effect);
+  }
+
+  .footer-copyright:hover {
+    color: var(--orange-700);
+  }
+}
+/*Чтобы на Тач Устройствах не отрабатывал :hover(эффект наведение)*/
+
+/* Mobile: Show hamburger menu and hide full navigation (768px and below) */
+@media (max-width: 1240px) {
+  /* Hero image adaptation */
+  .hero-container::after {
+    width: clamp(400px, 80vw, 600px);
+    height: clamp(380px, 70vw, 570px);
+    left: 50%;
+    top: -30%;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .footer-body {
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+  }
+  
+  .footer-container {
+    margin: 37px auto 30px auto;
+  }
+  
+  .footer-header {
+    margin-bottom: 20px;
+  }
+  
+  .footer-soc1als {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 25px;
+  }
+  
+ 
+  
+  .footer-column:first-child {
+    margin-right: min(100px, 100%);
+  }
+}
+
+@media (max-width: 775px) {
+  /* Hero mobile adaptation */
+  .hero {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .hero-container::after {
+    width: clamp(280px, 60vw, 400px);
+    height: clamp(265px, 57vw, 380px);
+    left: 40%;
+    top: -20%;
+    opacity: 0.5;
+  }
+
+  .hamburger {
+    display: inline-block;
+    margin-left: auto;
+    position: relative;
+    padding: 0;
+    top: 4px;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .header-container {
+    padding-inline: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo > a > img {
+    width: 120px;
+    height: 30px;
+  }
+
+  .footer-column > nav > ul > li {
+    padding: 0;
+  }
+  
+  .footer-column:first-child {
+    margin-bottom: 40px;
+  }
+  
+  .footer-header {
+    margin-bottom: 65px;
+    margin-right: 0;
+  }
+  
+  .footer-soc1als > .footer-soc1als-list {
+    flex-wrap: wrap;
+  }
+  
+  .footer-soc1als {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 25px;
+  }
+  
+  .footer-contact-info,
+  .footer-column:first-child > nav > ul {
+    margin-top: 5px;
+  }
+}
+
+/* Small mobile phones: up to 480px */
+@media (max-width: 480px) {
+  /* Hero extra small screens */
+  .hero {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+
+  .hero-container::after {
+    display: none; /* Прячем изображение на очень маленьких экранах */
+  }
+
+  .hero-label {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .hero-title {
+    margin-bottom: 18px;
+  }
+
+  .hero-description {
+    margin-bottom: 35px;
+    font-size: 14px;
+  }
+}

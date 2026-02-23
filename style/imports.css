@@ -1,0 +1,11 @@
+@import url("./normalize.css");
+@import url("./variables.css");
+@import url("./fonts.css");
+@import url("./main.css");
+@import url("./components/hero.css");
+@import url("./components/footer.css");
+@import url("./components/header.css");
+@import url("./components/burgermenu.css");
+@import url("./accessibility.css");
+@import url("./responsive.css");
+
