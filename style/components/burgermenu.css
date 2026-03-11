@@ -13,6 +13,7 @@
   border: 0;
   margin: 0;
   overflow: visible;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hamburger.is-active .hamburger-inner,
@@ -91,3 +92,66 @@
   transform: translate3d(0, -20px, 0) rotate(-90deg);
 }
 
+/* Hamburger Menu */
+
+.menu-wrapper {
+  perspective: 1000px;
+}
+
+.menu {
+  opacity: 0;
+  pointer-events: none;
+  background-color: red;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 167px;
+  left: 0;
+  z-index: var(--z-index-menu);
+  transform: scale(0.8) translateY(-20px);
+  will-change: opacity, transform;
+}
+
+
+/* Стили для элементов меню */
+.menu nav {
+  width: 100%;
+  height: 100%;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu a {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: var(--hover-btn-effect);
+  outline: none;
+}
+
+/* Hamburger Menu */

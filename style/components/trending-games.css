@@ -1,0 +1,65 @@
+.trending-games {
+    min-height: 448px;
+    margin-bottom: 129px;
+}
+
+.trending-games-title {
+    font-size: 31px;
+}
+
+
+.trending-games-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.trending-games-link {
+    margin-bottom: 44px;
+}
+
+.trending-games-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.trending-game-card > img {
+    border-radius: var(--radius-lg);
+    width: clamp(13.75rem, 24.55rem - 9vw, 22.75rem);
+}
+
+.trending-games-item {
+    text-align: center;
+}
+
+.trending-game-card-followers {
+    margin-top: 25px;
+    font-family: var(--font-family-secondary);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: var(--line-height-main);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.trending-game-card {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.trending-game-card-followers > svg {
+    position: relative;
+    top: 4px;
+    left: 9px;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.trending-game-card-followers > svg path {
+    transition: fill 0.3s ease;
+}
+
+.trending-game-card-followers > span {
+    margin-left: 10px;
+}

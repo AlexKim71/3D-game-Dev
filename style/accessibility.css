@@ -5,7 +5,26 @@
   outline: none;
 }
 
-
+/* Удаление светлого фона при нажатии на сенсорных устройствах */
+.main-nav__link,
+.header-logo,
+.contact-us,
+.hamburger,
+.footer-copyright,
+.footer-soc1als-link,
+.see_all-btn,
+.trending-game-card,
+.services-card,
+.services-card-link,
+.projects-card,
+.projects-card-link,
+.projects-see-all-btn,
+.newsletter-input,
+.newsletter-button,
+.projects-newsletter-input,
+.projects-newsletter-button {
+  -webkit-tap-highlight-color: transparent;
+}
 
 /*Навигация по меню шапки спомощью Tab+Shift(Для Доступности)*/
 .main-nav__link:focus-visible,
@@ -44,6 +63,110 @@
   background-color: var(--orange-700);
 }
 
-/*При нажатии на эти элементы отрабатывает эффект*/
+.see_all-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+}
+
+.services-card:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.services-card-link:active {
+    transform: scale(0.95);
+}
+
+.projects-card:active {
+    opacity: 0.9;
+}
+
+.projects-card-link:active {
+    transform: scale(0.95);
+}
+
+.projects-see-all-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+}
+
+/*Эмуляция :active на сенсорных устройствах через класс .is-active*/
+.main-nav__link.is-active {
+  color: #CECECE;
+}
+
+.contact-us.is-active {
+  background-color: var(--hover-btn-effect);
+}
+
+.hamburger.is-active {
+  opacity: 0.7;
+}
+
+.footer-copyright.is-active {
+  color: var(--orange-700);
+}
+
+.footer-soc1als-link.is-active svg path,
+.footer-soc1als-link.is-active {
+  fill: var(--white);
+  background-color: var(--orange-700);
+}
+
+.trending-game-card-followers:active svg path,
+.trending-game-card-followers:active {
+  fill: var(--orange-700);
+  color: var(--orange-700);
+}
+
+.see_all-btn.is-active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+}
+
+.trending-game-card.is-active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.services-card.is-active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.services-card-link.is-active {
+  transform: scale(0.95);
+}
+
+.projects-card.is-active {
+  opacity: 0.9;
+}
+
+.projects-card-link.is-active {
+  transform: scale(0.95);
+}
+
+.projects-see-all-btn.is-active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+}
+
+.newsletter-button.is-active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+}
+
+.projects-newsletter-button.is-active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+}
+
+.projects-newsletter-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+}
+
+
+/*Эмуляция :active на сенсорных устройствах через класс .is-active*/
 
 

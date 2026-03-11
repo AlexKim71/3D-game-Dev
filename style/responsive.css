@@ -14,31 +14,59 @@
     fill: var(--white);
     background-color: var(--orange-700);
   }
-  
-  .main-nav__link:hover::after {
-    content: "";
-    position: absolute;
-    left: -15px;
-    bottom: -9px;
 
-    width: 31px;
-    height: 4px;
-
-    background-color: var(--orange-700);
-    border-radius: var(--radius-lg);
-    transition: var(--transition-duration);
+  .trending-game-card-followers:hover > svg {
+    transform: translateY(-2px);
   }
 
-  .main-nav__link:hover::before {
+
+  .trending-game-card-followers:hover svg path,
+  .trending-game-card-followers:hover {
+    fill: var(--orange-500);
+    color: var(--orange-500);
+  }
+
+  .main-nav__link:hover {
+    color: var(--orange-500);
+  }
+
+  /* 1. Базовые стили для обеих линий (без hover) */
+  .main-nav__link::after,
+  .main-nav__link::before {
     content: "";
     position: absolute;
-    left: 19px;
     bottom: -9px;
-    width: 5px;
     height: 4px;
     background-color: var(--orange-700);
     border-radius: var(--radius-lg);
-    transition: var(--transition-duration);
+
+    /* Начальное состояние: сжаты до 0 */
+    transform: scaleX(0);
+    /* Откуда начинается «рисование» (left — слева направо) */
+    transform-origin: left;
+    /* Плавность: чем больше секунд, тем медленнее */
+    transition: transform 0.5s ease-out;
+  }
+
+  /* Настройки для длинной линии */
+  .main-nav__link::after {
+    left: -15px;
+    width: 31px;
+  }
+
+  /* Настройки для короткой линии */
+  .main-nav__link::before {
+    left: 19px;
+    width: 5px;
+    /* Можно добавить небольшую задержку, чтобы линии рисовались по очереди */
+    transition-delay: 0.1s;
+  }
+
+  /* 2. Состояние при наведении */
+  .main-nav__link:hover::after,
+  .main-nav__link:hover::before {
+    /* Линии «вырастают» до полного размера */
+    transform: scaleX(1);
   }
 
   .contact-us:hover {
@@ -48,6 +76,42 @@
   .footer-copyright:hover {
     color: var(--orange-700);
   }
+
+  .see_all-btn:hover {
+    background-color: var(--orange-500);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 107, 0, 0.3);
+  }
+
+  .see_all-btn:hover svg path {
+    fill: currentColor;
+  }
+
+  .projects-card-link:hover {
+    background-color: var(--orange-500);
+    transform: scale(1.15);
+  }
+
+  .projects-see-all-btn:hover {
+    background-color: var(--orange-500);
+    border-color: var(--orange-500);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3);
+  }
+
+  .newsletter-button:hover {
+    background-color: var(--orange-700);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 107, 0, 0.3);
+  }
+
+  .projects-newsletter-button:hover {
+    background-color: var(--orange-700);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 107, 0, 0.3);
+  }
+
 }
 /*Чтобы на Тач Устройствах не отрабатывал :hover(эффект наведение)*/
 
@@ -91,7 +155,90 @@
   }
 }
 
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .services {
+    padding: 60px 0;
+  }
+
+  .services-list {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .presentation {
+    padding: 60px 0;
+  }
+
+  .presentation-title {
+    margin-bottom: 40px;
+  }
+
+  .presentation-content {
+    gap: 40px;
+  }
+
+  .presentation-video::after {
+    right: clamp(10px, 3vw, 100px);
+  }
+
+  .presentation-dots {
+    width: 90px;
+    height: 70px;
+    gap: 10px;
+    right: -30px;
+    top: -30px;
+  }
+
+  .presentation-dots span {
+    width: 10px;
+    height: 10px;
+  }
+
+}
+
 @media (max-width: 775px) {
+
+  .header {
+    padding-right: var(--scrollbar-width);
+    width: 100vw;
+  }
+
+  .presentation {
+    padding: 40px 0;
+  }
+
+  .presentation-title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+
+  .presentation-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .presentation-subtitle {
+    font-size: 20px;
+  }
+
+  .presentation-description {
+    font-size: 14px;
+  }
+
+  .presentation-play-btn svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .presentation-dots {
+    display: none;
+  }
+
+  .presentation-video::after {
+    display: none;
+  }
+
   /* Hero mobile adaptation */
   .hero {
     margin-top: 60px;
@@ -104,6 +251,10 @@
     left: 40%;
     top: -20%;
     opacity: 0.5;
+  }
+
+  .hero-container {
+    margin-top: 319px;
   }
 
   .hamburger {
@@ -156,6 +307,59 @@
   .footer-column:first-child > nav > ul {
     margin-top: 5px;
   }
+
+  .trending-games-title {
+    margin-bottom: 10px;
+  }
+
+  .services {
+    padding: 40px 0;
+  }
+
+  .services-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .services-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .services-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .services-item {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services-card {
+    padding: 20px 15px;
+    gap: 15px;
+  }
+
+  .services-card-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .services-card-icon img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .services-card-title {
+    margin: 0;
+  }
+
 }
 
 /* Small mobile phones: up to 480px */
@@ -182,5 +386,40 @@
   .hero-description {
     margin-bottom: 35px;
     font-size: 14px;
+  }
+
+  .presentation {
+    padding: 0;
+  }
+
+  .presentation-title {
+    line-height: normal;
+  }
+
+  .trending-games-header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .services {
+    padding: 30px 0;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .services-card {
+    padding: 20px;
+  }
+
+  .services-title {
+    padding: 0;
+  }
+
+  .services-subtitle {
+    margin-bottom: 0;
   }
 }

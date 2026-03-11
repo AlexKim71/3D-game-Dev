@@ -1,0 +1,72 @@
+/* Класс для открытия */
+.menu.is-open {
+    pointer-events: auto;
+    animation: slideIn 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+/* Класс для закрытия */
+.menu.is-closing {
+    pointer-events: none;
+    animation: slideOut 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+/* Анимация открытия */
+@keyframes slideIn {
+    0% {
+        transform: scale(0.8) translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Анимация закрытия */
+@keyframes slideOut {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8) translateY(-20px);
+        opacity: 0;
+    }
+}
+
+
+/* Анимация открытия */
+@keyframes slideIn {
+    0% {
+        transform: scale(0.8) translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Анимация закрытия */
+@keyframes slideOut {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8) translateY(-20px);
+        opacity: 0;
+    }
+}
+
+/* Класс для открытия */
+.menu.is-open {
+    pointer-events: auto;
+    animation: slideIn 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+/* Класс для закрытия */
+.menu.is-closing {
+    pointer-events: none;
+    animation: slideOut 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}

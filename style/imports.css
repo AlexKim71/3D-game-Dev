@@ -2,6 +2,11 @@
 @import url("./variables.css");
 @import url("./fonts.css");
 @import url("./main.css");
+@import url("./animations.css");
+@import url("./components/presentation.css");
+@import url("./components/trending-games.css");
+@import url("./components/services.css");
+@import url("./components/projects.css");
 @import url("./components/hero.css");
 @import url("./components/footer.css");
 @import url("./components/header.css");

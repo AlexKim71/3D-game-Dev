@@ -32,6 +32,8 @@
         <link rel="icon" type="image/png" href="img/favicon.png" />
         <link rel="stylesheet" href="style/imports.css" />
         <script src="./scripts/burger-toggle.js" defer></script>
+        <script src="./scripts/scrollbarWidth.js" defer></script>
+        <script src="./scripts/sticky-header.js" defer></script>
     </head>
     <body>
         <header class="header">
@@ -72,18 +74,410 @@
                     <span class="hamburger-inner"></span>
                   </span>
                 </button>
+                <div class="menu">
+                    <nav aria-label="Мобильная навигация">
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="about-us.html">About us</a></li>
+                            <li><a href="services.html">Portfolio</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="contact-us.html">Contact us</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
         <main>
             <section class="hero">
-                <div class="hero-container">
+                <div class="hero-container container">
                     <div class="hero-content">
                         <p class="hero-label">3D game Dev</p>
                         <h1 class="hero-title">Work that we produce for our clients</h1>
                         <p class="hero-description description-1">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
                         </p>
-                        <a href="/" class="hero-btn btn-1" title="Get more details">Get more details</a>
+                        <a href="services.html" class="hero-btn btn-1" title="Get more details">Get more details</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="trending-games" aria-labelledby="trending-games-title">
+                <div class="trending-games-container container">
+                    <header class="trending-games-header">
+                        <h2 id="trending-games-title" class="trending-games-title">Currently Trending Games</h2>
+                        <a
+                            href="services.html"
+                            class="trending-games-link see_all-btn"
+                            aria-label="See all currently trending games"
+                            title="See all currently trending games"
+                        >
+                            See all
+                        </a>
+                    </header>
+
+                    <ul class="trending-games-list" aria-label="Trending games list">
+                        <li class="trending-games-item">
+                            <article class="trending-game-card" aria-labelledby="trending-game-1-title">
+                                <h3 id="trending-game-1-title" class="visually-hidden">God of War style action game</h3>
+                                <img
+                                    class="trending-game-card-image"
+                                    src="./images/1.jpg"
+                                    alt="Fantasy warriors standing in battle"
+                                    width="251"
+                                    height="277"
+                                    loading="lazy"
+                                />
+                                <p class="trending-game-card-followers">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <g clip-path="url(#clip0_1_266)">
+                                            <path d="M21.8216 14.6372C21.5352 10.9087 19.7993 8.57221 18.2678 6.5104C16.8498 4.60161 15.625 2.95327 15.625 0.521725C15.625 0.326413 15.5156 0.147897 15.3422 0.0583953C15.1682 -0.0316437 14.9592 -0.0168976 14.801 0.0980438C12.501 1.74384 10.582 4.51772 9.91162 7.1644C9.44624 9.00703 9.38467 11.0785 9.37603 12.4466C7.252 11.993 6.77085 8.81582 6.76577 8.7812C6.74185 8.6164 6.64116 8.47299 6.49468 8.39468C6.34668 8.31738 6.17271 8.31176 6.02266 8.38603C5.91128 8.43994 3.28877 9.77246 3.13618 15.0928C3.12549 15.2698 3.125 15.4474 3.125 15.6249C3.125 20.7936 7.33081 24.9992 12.5 24.9992C12.5071 24.9997 12.5147 25.0007 12.5208 24.9992C12.5229 24.9992 12.5249 24.9992 12.5274 24.9992C17.6839 24.9844 21.875 20.7845 21.875 15.6249C21.875 15.3649 21.8216 14.6372 21.8216 14.6372ZM12.5 23.9576C10.7768 23.9576 9.375 22.4644 9.375 20.6289C9.375 20.5664 9.37451 20.5033 9.37905 20.426C9.3999 19.6519 9.54692 19.1235 9.70815 18.772C10.0103 19.421 10.5504 20.0176 11.4278 20.0176C11.7157 20.0176 11.9487 19.7846 11.9487 19.4968C11.9487 18.7553 11.964 17.8998 12.1486 17.1277C12.3129 16.4432 12.7055 15.7148 13.203 15.131C13.4242 15.8888 13.8556 16.5021 14.2767 17.1008C14.8794 17.9572 15.5025 18.8427 15.6119 20.3527C15.6185 20.4422 15.6251 20.5323 15.6251 20.6289C15.625 22.4644 14.2232 23.9576 12.5 23.9576Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_266">
+                                                <rect width="25" height="25" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>40 Followers</span>
+                                </p>
+                            </article>
+                        </li>
+
+                        <li class="trending-games-item">
+                            <article class="trending-game-card" aria-labelledby="trending-game-2-title">
+                                <h3 id="trending-game-2-title" class="visually-hidden">Neon fantasy character game</h3>
+                                <img
+                                    class="trending-game-card-image"
+                                    src="./images/2.jpg"
+                                    alt="Female character in neon blue and purple effects"
+                                    width="251"
+                                    height="277"
+                                    loading="lazy"
+                                />
+                                <p class="trending-game-card-followers">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <g clip-path="url(#clip0_1_267)">
+                                            <path d="M21.8216 14.6372C21.5352 10.9087 19.7993 8.57221 18.2678 6.5104C16.8498 4.60161 15.625 2.95327 15.625 0.521725C15.625 0.326413 15.5156 0.147897 15.3422 0.0583953C15.1682 -0.0316437 14.9592 -0.0168976 14.801 0.0980438C12.501 1.74384 10.582 4.51772 9.91162 7.1644C9.44624 9.00703 9.38467 11.0785 9.37603 12.4466C7.252 11.993 6.77085 8.81582 6.76577 8.7812C6.74185 8.6164 6.64116 8.47299 6.49468 8.39468C6.34668 8.31738 6.17271 8.31176 6.02266 8.38603C5.91128 8.43994 3.28877 9.77246 3.13618 15.0928C3.12549 15.2698 3.125 15.4474 3.125 15.6249C3.125 20.7936 7.33081 24.9992 12.5 24.9992C12.5071 24.9997 12.5147 25.0007 12.5208 24.9992C12.5229 24.9992 12.5249 24.9992 12.5274 24.9992C17.6839 24.9844 21.875 20.7845 21.875 15.6249C21.875 15.3649 21.8216 14.6372 21.8216 14.6372ZM12.5 23.9576C10.7768 23.9576 9.375 22.4644 9.375 20.6289C9.375 20.5664 9.37451 20.5033 9.37905 20.426C9.3999 19.6519 9.54692 19.1235 9.70815 18.772C10.0103 19.421 10.5504 20.0176 11.4278 20.0176C11.7157 20.0176 11.9487 19.7846 11.9487 19.4968C11.9487 18.7553 11.964 17.8998 12.1486 17.1277C12.3129 16.4432 12.7055 15.7148 13.203 15.131C13.4242 15.8888 13.8556 16.5021 14.2767 17.1008C14.8794 17.9572 15.5025 18.8427 15.6119 20.3527C15.6185 20.4422 15.6251 20.5323 15.6251 20.6289C15.625 22.4644 14.2232 23.9576 12.5 23.9576Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_267">
+                                                <rect width="25" height="25" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>40 Followers</span>
+                                </p>
+                            </article>
+                        </li>
+
+                        <li class="trending-games-item">
+                            <article class="trending-game-card" aria-labelledby="trending-game-3-title">
+                                <h3 id="trending-game-3-title" class="visually-hidden">Military shooter game</h3>
+                                <img
+                                    class="trending-game-card-image"
+                                    src="./images/3.jpg"
+                                    alt="Soldier firing a weapon in combat"
+                                    width="251"
+                                    height="277"
+                                    loading="lazy"
+                                />
+                                <p class="trending-game-card-followers">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <g clip-path="url(#clip0_1_268)">
+                                            <path d="M21.8216 14.6372C21.5352 10.9087 19.7993 8.57221 18.2678 6.5104C16.8498 4.60161 15.625 2.95327 15.625 0.521725C15.625 0.326413 15.5156 0.147897 15.3422 0.0583953C15.1682 -0.0316437 14.9592 -0.0168976 14.801 0.0980438C12.501 1.74384 10.582 4.51772 9.91162 7.1644C9.44624 9.00703 9.38467 11.0785 9.37603 12.4466C7.252 11.993 6.77085 8.81582 6.76577 8.7812C6.74185 8.6164 6.64116 8.47299 6.49468 8.39468C6.34668 8.31738 6.17271 8.31176 6.02266 8.38603C5.91128 8.43994 3.28877 9.77246 3.13618 15.0928C3.12549 15.2698 3.125 15.4474 3.125 15.6249C3.125 20.7936 7.33081 24.9992 12.5 24.9992C12.5071 24.9997 12.5147 25.0007 12.5208 24.9992C12.5229 24.9992 12.5249 24.9992 12.5274 24.9992C17.6839 24.9844 21.875 20.7845 21.875 15.6249C21.875 15.3649 21.8216 14.6372 21.8216 14.6372ZM12.5 23.9576C10.7768 23.9576 9.375 22.4644 9.375 20.6289C9.375 20.5664 9.37451 20.5033 9.37905 20.426C9.3999 19.6519 9.54692 19.1235 9.70815 18.772C10.0103 19.421 10.5504 20.0176 11.4278 20.0176C11.7157 20.0176 11.9487 19.7846 11.9487 19.4968C11.9487 18.7553 11.964 17.8998 12.1486 17.1277C12.3129 16.4432 12.7055 15.7148 13.203 15.131C13.4242 15.8888 13.8556 16.5021 14.2767 17.1008C14.8794 17.9572 15.5025 18.8427 15.6119 20.3527C15.6185 20.4422 15.6251 20.5323 15.6251 20.6289C15.625 22.4644 14.2232 23.9576 12.5 23.9576Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_268">
+                                                <rect width="25" height="25" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>40 Followers</span>
+                                </p>
+                            </article>
+                        </li>
+
+                        <li class="trending-games-item">
+                            <article class="trending-game-card" aria-labelledby="trending-game-4-title">
+                                <h3 id="trending-game-4-title" class="visually-hidden">Cyberpunk city game</h3>
+                                <img
+                                    class="trending-game-card-image"
+                                    src="./images/4.jpg"
+                                    alt="Neon-lit cyberpunk city street at night"
+                                    width="251"
+                                    height="277"
+                                    loading="lazy"
+                                />
+                                <p class="trending-game-card-followers">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <g clip-path="url(#clip0_1_269)">
+                                            <path d="M21.8216 14.6372C21.5352 10.9087 19.7993 8.57221 18.2678 6.5104C16.8498 4.60161 15.625 2.95327 15.625 0.521725C15.625 0.326413 15.5156 0.147897 15.3422 0.0583953C15.1682 -0.0316437 14.9592 -0.0168976 14.801 0.0980438C12.501 1.74384 10.582 4.51772 9.91162 7.1644C9.44624 9.00703 9.38467 11.0785 9.37603 12.4466C7.252 11.993 6.77085 8.81582 6.76577 8.7812C6.74185 8.6164 6.64116 8.47299 6.49468 8.39468C6.34668 8.31738 6.17271 8.31176 6.02266 8.38603C5.91128 8.43994 3.28877 9.77246 3.13618 15.0928C3.12549 15.2698 3.125 15.4474 3.125 15.6249C3.125 20.7936 7.33081 24.9992 12.5 24.9992C12.5071 24.9997 12.5147 25.0007 12.5208 24.9992C12.5229 24.9992 12.5249 24.9992 12.5274 24.9992C17.6839 24.9844 21.875 20.7845 21.875 15.6249C21.875 15.3649 21.8216 14.6372 21.8216 14.6372ZM12.5 23.9576C10.7768 23.9576 9.375 22.4644 9.375 20.6289C9.375 20.5664 9.37451 20.5033 9.37905 20.426C9.3999 19.6519 9.54692 19.1235 9.70815 18.772C10.0103 19.421 10.5504 20.0176 11.4278 20.0176C11.7157 20.0176 11.9487 19.7846 11.9487 19.4968C11.9487 18.7553 11.964 17.8998 12.1486 17.1277C12.3129 16.4432 12.7055 15.7148 13.203 15.131C13.4242 15.8888 13.8556 16.5021 14.2767 17.1008C14.8794 17.9572 15.5025 18.8427 15.6119 20.3527C15.6185 20.4422 15.6251 20.5323 15.6251 20.6289C15.625 22.4644 14.2232 23.9576 12.5 23.9576Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_269">
+                                                <rect width="25" height="25" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span>40 Followers</span>
+                                </p>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="presentation" aria-labelledby="presentation-title">
+                <div class="presentation-container container">
+                    <h2 id="presentation-title" class="presentation-title">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </h2>
+
+                    <div class="presentation-content">
+                        <div class="presentation-text">
+                            <h3 class="presentation-subtitle">Lorem Ipsum</h3>
+                            <p class="presentation-description description">
+                                Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="presentation-video">
+                            <img
+                                src="./images/spider-men.jpg"
+                                alt="Game presentation video thumbnail"
+                                width="1146"
+                                height="462"
+                                loading="lazy"
+                                class="presentation-video-image"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="services" aria-labelledby="services-title">
+                <div class="services-container container">
+                    <header class="services-header">
+                        <h2 id="services-title" class="services-title subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                        <p class="services-subtitle description-1">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    </header>
+
+                    <ul class="services-list" aria-label="Our services">
+                        <li class="services-item">
+                            <article class="services-card">
+                                <div class="services-card-icon">
+                                    <img src="./icons/phone-circle.svg" alt="Mobile Game Development" width="64" height="64" loading="lazy" />
+                                </div>
+                                <h3 class="services-card-title">Mobile Game Development</h3>
+                                <a href="services.html" class="services-card-link" aria-label="Learn more about Mobile Game Development">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.26222 11.974C1.34814 11.988 1.4351 11.9944 1.52211 11.9933L16.3372 11.9933L16.0141 12.1435C15.6984 12.293 15.4111 12.4964 15.1652 12.7446L11.0107 16.8991C10.4635 17.4214 10.3716 18.2616 10.7928 18.8899C11.2831 19.5595 12.2232 19.7048 12.8928 19.2146C12.9469 19.1749 12.9983 19.1317 13.0466 19.0853L20.5593 11.5726C21.1464 10.9861 21.147 10.0348 20.5605 9.44765C20.5601 9.44728 20.5597 9.44685 20.5593 9.44648L13.0466 1.93378C12.459 1.34784 11.5077 1.34916 10.9217 1.93674C10.8756 1.98299 10.8325 2.0322 10.7928 2.08404C10.3716 2.71233 10.4635 3.55258 11.0107 4.0749L15.1577 8.23693C15.3781 8.45762 15.6316 8.64267 15.909 8.78536L16.3597 8.9882L1.6048 8.9882C0.837233 8.9597 0.163813 9.49587 0.0196152 10.2503C-0.113218 11.0695 0.443098 11.8411 1.26222 11.974Z" fill="#DC7000"/>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+
+                        <li class="services-item">
+                            <article class="services-card">
+                                <div class="services-card-icon">
+                                    <img src="./icons/pc-circle.svg" alt="PC Game Development" width="64" height="64" loading="lazy" />
+                                </div>
+                                <h3 class="services-card-title">PC Game Development</h3>
+                                <a href="services.html" class="services-card-link" aria-label="Learn more about PC Game Development">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.26222 11.974C1.34814 11.988 1.4351 11.9944 1.52211 11.9933L16.3372 11.9933L16.0141 12.1435C15.6984 12.293 15.4111 12.4964 15.1652 12.7446L11.0107 16.8991C10.4635 17.4214 10.3716 18.2616 10.7928 18.8899C11.2831 19.5595 12.2232 19.7048 12.8928 19.2146C12.9469 19.1749 12.9983 19.1317 13.0466 19.0853L20.5593 11.5726C21.1464 10.9861 21.147 10.0348 20.5605 9.44765C20.5601 9.44728 20.5597 9.44685 20.5593 9.44648L13.0466 1.93378C12.459 1.34784 11.5077 1.34916 10.9217 1.93674C10.8756 1.98299 10.8325 2.0322 10.7928 2.08404C10.3716 2.71233 10.4635 3.55258 11.0107 4.0749L15.1577 8.23693C15.3781 8.45762 15.6316 8.64267 15.909 8.78536L16.3597 8.9882L1.6048 8.9882C0.837233 8.9597 0.163813 9.49587 0.0196152 10.2503C-0.113218 11.0695 0.443098 11.8411 1.26222 11.974Z" fill="#DC7000"/>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+
+                        <li class="services-item">
+                            <article class="services-card">
+                                <div class="services-card-icon">
+                                    <img src="./icons/ps4-circle.svg" alt="PS4 Game Development" width="64" height="64" loading="lazy" />
+                                </div>
+                                <h3 class="services-card-title">PS4 Game Development</h3>
+                                <a href="services.html" class="services-card-link" aria-label="Learn more about PS4 Game Development">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.26222 11.974C1.34814 11.988 1.4351 11.9944 1.52211 11.9933L16.3372 11.9933L16.0141 12.1435C15.6984 12.293 15.4111 12.4964 15.1652 12.7446L11.0107 16.8991C10.4635 17.4214 10.3716 18.2616 10.7928 18.8899C11.2831 19.5595 12.2232 19.7048 12.8928 19.2146C12.9469 19.1749 12.9983 19.1317 13.0466 19.0853L20.5593 11.5726C21.1464 10.9861 21.147 10.0348 20.5605 9.44765C20.5601 9.44728 20.5597 9.44685 20.5593 9.44648L13.0466 1.93378C12.459 1.34784 11.5077 1.34916 10.9217 1.93674C10.8756 1.98299 10.8325 2.0322 10.7928 2.08404C10.3716 2.71233 10.4635 3.55258 11.0107 4.0749L15.1577 8.23693C15.3781 8.45762 15.6316 8.64267 15.909 8.78536L16.3597 8.9882L1.6048 8.9882C0.837233 8.9597 0.163813 9.49587 0.0196152 10.2503C-0.113218 11.0695 0.443098 11.8411 1.26222 11.974Z" fill="#DC7000"/>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+
+                        <li class="services-item">
+                            <article class="services-card">
+                                <div class="services-card-icon">
+                                    <img src="./icons/virtual-circle.svg" alt="AR/VR Solutions" width="64" height="64" loading="lazy" />
+                                </div>
+                                <h3 class="services-card-title">AR/VR Solutions</h3>
+                                <a href="services.html" class="services-card-link" aria-label="Learn more about AR/VR Solutions">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.26222 11.974C1.34814 11.988 1.4351 11.9944 1.52211 11.9933L16.3372 11.9933L16.0141 12.1435C15.6984 12.293 15.4111 12.4964 15.1652 12.7446L11.0107 16.8991C10.4635 17.4214 10.3716 18.2616 10.7928 18.8899C11.2831 19.5595 12.2232 19.7048 12.8928 19.2146C12.9469 19.1749 12.9983 19.1317 13.0466 19.0853L20.5593 11.5726C21.1464 10.9861 21.147 10.0348 20.5605 9.44765C20.5601 9.44728 20.5597 9.44685 20.5593 9.44648L13.0466 1.93378C12.459 1.34784 11.5077 1.34916 10.9217 1.93674C10.8756 1.98299 10.8325 2.0322 10.7928 2.08404C10.3716 2.71233 10.4635 3.55258 11.0107 4.0749L15.1577 8.23693C15.3781 8.45762 15.6316 8.64267 15.909 8.78536L16.3597 8.9882L1.6048 8.9882C0.837233 8.9597 0.163813 9.49587 0.0196152 10.2503C-0.113218 11.0695 0.443098 11.8411 1.26222 11.974Z" fill="#DC7000"/>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+
+                        <li class="services-item">
+                            <article class="services-card">
+                                <div class="services-card-icon">
+                                    <img src="./icons/3d-circle.svg" alt="AR/VR design" width="64" height="64" loading="lazy" />
+                                </div>
+                                <h3 class="services-card-title">AR/VR design</h3>
+                                <a href="services.html" class="services-card-link" aria-label="Learn more about AR/VR design">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.26222 11.974C1.34814 11.988 1.4351 11.9944 1.52211 11.9933L16.3372 11.9933L16.0141 12.1435C15.6984 12.293 15.4111 12.4964 15.1652 12.7446L11.0107 16.8991C10.4635 17.4214 10.3716 18.2616 10.7928 18.8899C11.2831 19.5595 12.2232 19.7048 12.8928 19.2146C12.9469 19.1749 12.9983 19.1317 13.0466 19.0853L20.5593 11.5726C21.1464 10.9861 21.147 10.0348 20.5605 9.44765C20.5601 9.44728 20.5597 9.44685 20.5593 9.44648L13.0466 1.93378C12.459 1.34784 11.5077 1.34916 10.9217 1.93674C10.8756 1.98299 10.8325 2.0322 10.7928 2.08404C10.3716 2.71233 10.4635 3.55258 11.0107 4.0749L15.1577 8.23693C15.3781 8.45762 15.6316 8.64267 15.909 8.78536L16.3597 8.9882L1.6048 8.9882C0.837233 8.9597 0.163813 9.49587 0.0196152 10.2503C-0.113218 11.0695 0.443098 11.8411 1.26222 11.974Z" fill="#DC7000"/>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+
+                        <li class="services-item">
+                            <article class="services-card">
+                                <div class="services-card-icon">
+                                    <img src="./icons/engine-circle.svg" alt="3D Modelings" width="64" height="64" loading="lazy" />
+                                </div>
+                                <h3 class="services-card-title">3D Modelings</h3>
+                                <a href="services.html" class="services-card-link" aria-label="Learn more about 3D Modelings">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="red" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.26222 11.974C1.34814 11.988 1.4351 11.9944 1.52211 11.9933L16.3372 11.9933L16.0141 12.1435C15.6984 12.293 15.4111 12.4964 15.1652 12.7446L11.0107 16.8991C10.4635 17.4214 10.3716 18.2616 10.7928 18.8899C11.2831 19.5595 12.2232 19.7048 12.8928 19.2146C12.9469 19.1749 12.9983 19.1317 13.0466 19.0853L20.5593 11.5726C21.1464 10.9861 21.147 10.0348 20.5605 9.44765C20.5601 9.44728 20.5597 9.44685 20.5593 9.44648L13.0466 1.93378C12.459 1.34784 11.5077 1.34916 10.9217 1.93674C10.8756 1.98299 10.8325 2.0322 10.7928 2.08404C10.3716 2.71233 10.4635 3.55258 11.0107 4.0749L15.1577 8.23693C15.3781 8.45762 15.6316 8.64267 15.909 8.78536L16.3597 8.9882L1.6048 8.9882C0.837233 8.9597 0.163813 9.49587 0.0196152 10.2503C-0.113218 11.0695 0.443098 11.8411 1.26222 11.974Z" fill="#DC7000"/>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="projects" aria-labelledby="projects-title">
+                <div class="projects-container container-second">
+                    <header class="projects-header">
+                        <h2 id="projects-title" class="projects-title">Our Recent Projects</h2>
+                        <p class="projects-subtitle">Lorem ipsum is simply dummy text of the printing and typesetting industry</p>
+                    </header>
+
+                    <ul class="projects-list" aria-label="Recent projects">
+                        <li class="projects-item">
+                            <article class="projects-card">
+                                <img src="./images/computer-club.jpg" alt="Gaming computer setup with blue lighting" width="400" height="280" loading="lazy" />
+                                <div class="projects-card-overlay">
+                                    <a href="services.html" class="projects-card-link" aria-label="View project details">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M24 30H36M36 30L31 25M36 30L31 35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="projects-item">
+                            <article class="projects-card">
+                                <img src="./images/gamer.jpg" alt="Gaming tournament interview setup" width="400" height="280" loading="lazy" />
+                                <div class="projects-card-overlay">
+                                    <a href="services.html" class="projects-card-link" aria-label="View project details">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M24 30H36M36 30L31 25M36 30L31 35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="projects-item">
+                            <article class="projects-card">
+                                <img src="./images/stong-game-set-up.jpg" alt="Modern gaming arcade machines" width="400" height="280" loading="lazy" />
+                                <div class="projects-card-overlay">
+                                    <a href="services.html" class="projects-card-link" aria-label="View project details">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M24 30H36M36 30L31 25M36 30L31 35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="projects-item">
+                            <article class="projects-card">
+                                <img src="./images/play-has-no-limits.jpg" alt="Professional gaming studio office" width="400" height="280" loading="lazy" />
+                                <div class="projects-card-overlay">
+                                    <a href="services.html" class="projects-card-link" aria-label="View project details">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M24 30H36M36 30L31 25M36 30L31 35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="projects-item">
+                            <article class="projects-card">
+                                <img src="./images/retro-game-club.jpg" alt="Gaming computer club setup" width="400" height="280" loading="lazy" />
+                                <div class="projects-card-overlay">
+                                    <a href="services.html" class="projects-card-link" aria-label="View project details">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M24 30H36M36 30L31 25M36 30L31 35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="projects-item">
+                            <article class="projects-card">
+                                <img src="./images/computer-club.jpg" alt="Retro gaming club with vintage machines" width="400" height="280" loading="lazy" />
+                                <div class="projects-card-overlay">
+                                    <a href="services.html" class="projects-card-link" aria-label="View project details">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <circle cx="30" cy="30" r="29" stroke="currentColor" stroke-width="2"/>
+                                            <path d="M24 30H36M36 30L31 25M36 30L31 35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+
+                    <div class="projects-footer">
+                        <a href="services.html" class="projects-see-all-btn see_all-btn" title="See all projects">See all</a>
+                    </div>
+
+                    <!-- About Brief Section inside Projects -->
+                    <div class="projects-about-brief">
+                        <header class="projects-about-brief-header">
+                            <h2 id="projects-about-brief-title" class="projects-about-brief-title">Lorem Ipsum</h2>
+                            <p class="projects-about-brief-description">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </header>
+                    </div>
+
+                    <!-- Newsletter Section inside Projects -->
+                    <div class="projects-newsletter">
+                        <div class="projects-newsletter-content">
+                            <header class="projects-newsletter-header">
+                                <h2 id="projects-newsletter-title" class="projects-newsletter-title">Stay in the loop</h2>
+                                <p class="projects-newsletter-description">Subscribe to receive the latest news and updates about TDA. We promise not to spam you!</p>
+                            </header>
+
+                            <form class="projects-newsletter-form" aria-label="Newsletter subscription form">
+                                <div class="projects-newsletter-form-group">
+                                    <input
+                                        type="email"
+                                        class="projects-newsletter-input"
+                                        placeholder="Enter email address"
+                                        required
+                                        aria-label="Email address"
+                                    />
+                                    <button type="submit" class="projects-newsletter-button" aria-label="Subscribe to newsletter">
+                                        Continue
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -138,14 +532,14 @@
                         <div class="footer-soc1als">
                             <ul class="footer-soc1als-list">
                                 <li class="footer-soc1als-item">
-                                    <a class="footer-soc1als-link" href="/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                                    <a class="footer-soc1als-link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.9985 1.9925H9.094V0.0845C8.905 0.0585 8.255 0 7.498 0C5.91851 0 4.83651 0.9935 4.83651 2.8195V4.5H3.09351V6.633H4.83651V12H6.97351V6.6335H8.646L8.9115 4.5005H6.97301V3.031C6.97351 2.4145 7.1395 1.9925 7.9985 1.9925Z" fill="black" />
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="footer-soc1als-item">
-                                    <a class="footer-soc1als-link" href="/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                                    <a class="footer-soc1als-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
                                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_1_311)">
                                                 <path d="M9.481 0H3.51898C1.57858 0 0 1.57858 0 3.51898V9.4811C0 11.4214 1.57858 13 3.51898 13H9.4811C11.4214 13 13 11.4214 13 9.4811V3.51898C13 1.57858 11.4214 0 9.481 0V0ZM12.2379 9.4811C12.2379 11.0012 11.0012 12.2379 9.481 12.2379H3.51898C1.99881 12.2379 0.762114 11.0012 0.762114 9.4811V3.51898C0.762114 1.99881 1.99881 0.762114 3.51898 0.762114H9.4811C11.0012 0.762114 12.2379 1.99881 12.2379 3.51898V9.4811Z" fill="black" />
@@ -162,7 +556,7 @@
                                     </a>
                                 </li>
                                 <li class="footer-soc1als-item">
-                                    <a class="footer-soc1als-link" href="/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                                    <a class="footer-soc1als-link" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
                                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_1_318)">
                                                 <path
@@ -179,7 +573,7 @@
                                     </a>
                                 </li>
                                 <li class="footer-soc1als-item">
-                                    <a class="footer-soc1als-link" href="/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                    <a class="footer-soc1als-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                                         <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_1_325)">
                                                 <path d="M10.9973 11V10.9996H11.0001V6.96531C11.0001 4.99173 10.5752 3.47144 8.26795 3.47144C7.15879 3.47144 6.41445 4.0801 6.11058 4.65714H6.07849V3.65569H3.89087V10.9996H6.16879V7.36314C6.16879 6.40569 6.35029 5.47985 7.536 5.47985C8.70429 5.47985 8.7217 6.57252 8.7217 7.42456V11H10.9973Z" fill="black" />

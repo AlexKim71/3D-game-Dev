@@ -74,6 +74,7 @@
   width: 34px;
   background-color: var(--white);
   border-radius: 50%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .footer-column {
@@ -83,6 +84,10 @@
 .footer-column > h2 {
   font-size: 17px;
   font-weight: 500;
+}
+
+.footer-copyright {
+  -webkit-tap-highlight-color: transparent;
 }
 
 

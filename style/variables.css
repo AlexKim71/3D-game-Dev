@@ -39,6 +39,7 @@
   --container-first: 1170px;
   --container-second: 1188px;
   --container-third: 1146px;
+  --container-fourth: 1045px;
 
   /* Border Radius */
   --radius-xl: 40px;
@@ -48,6 +49,7 @@
   --radius-xs: 9px;
   --radius-xxs: 8px;
   --radius-xxxs: 6px;
+  --radius-y: 5px;
   --radius-full: 50%;
   
   /*Ooutline*/
@@ -63,7 +65,9 @@
   --border-orange: 2px solid #DC7000;
   --border-gray-soft: 0.6px solid #CECECE;
 
+  /*HEIGHTS & LINE-HEIGHTS*/
   --button-height: 53px;
+  --line-height-main: 187%;
 
 
   /* FONTS */
@@ -72,4 +76,12 @@
 
   /*ANIMATION*/
   --transition-duration: 0.2s;
+  --scrollbar-width: 0px;
+
+  /*Z-INDEX*/
+  --z-index-overlay: 50;
+  --z-index-menu: 201;
+  --z-index-header: 200;
+  --z-index-image-spider-man: 25;
+
 }

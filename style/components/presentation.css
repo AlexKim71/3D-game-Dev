@@ -1,0 +1,75 @@
+.presentation {
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.presentation-container {
+    max-width: var(--container-third);
+    padding-inline: var(--header-padding-x);
+    margin-inline: auto;
+}
+
+.presentation-title {
+    font-size: clamp(1.25rem, 1.014rem + 1.3vw, 2.188rem);
+    font-weight: 700;
+    line-height: var(--line-height-main);
+    text-align: center;
+    margin-bottom: clamp(1.25rem, calc(0.75rem + 2.5vw), 3.75rem);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.presentation-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 545px;
+}
+
+.presentation-subtitle {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: var(--line-height-main);
+}
+
+.presentation-description {
+    font-size: clamp(0.75rem, 0.718rem + 0.17vw, 0.875rem);
+    line-height: var(--line-height-main);
+}
+
+.presentation-video > img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-y);
+    margin: clamp(1.25rem, 3vw, 2.875rem) auto clamp(2.5rem, 10vw, 9.8125rem);
+}
+
+.presentation-video {
+    position: relative;
+    z-index: var(--z-index-image-spider-man);
+}
+
+.presentation-video::after {
+    content: "";
+    background-image: url("../../images/grid.png");
+    position: absolute;
+    top: -17%;
+    right: clamp(20px, 5vw, 196px);
+    width: 196px;
+    height: 154px;
+    z-index: -1;
+}
+
+.presentation-play-btn {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
+
+
