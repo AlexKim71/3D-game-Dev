@@ -1,6 +1,7 @@
 const servicesSwiper = new Swiper('.services-swiper', {  
   direction: 'horizontal',
   loop: true,
+  speed: 1000,
   allowTouchMove: true,
   grabCursor: true,
   keyboardControl: true,
@@ -14,7 +15,7 @@ const servicesSwiper = new Swiper('.services-swiper', {
     },
   },
   autoplay: {
-    delay: 2000,
+    delay: 5000,
   },
   navigation: {
     nextEl: '.services-slider__btn--next',

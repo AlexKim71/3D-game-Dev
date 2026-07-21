@@ -10,9 +10,9 @@ const aboutUsSwiper = new Swiper('.about-us_swiper', {
                 '<span class="' + totalClass + '"></span>';
         }
     },
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    autoplay: {
+        delay: 5000,
+    },
     effect: 'fade',
     fadeEffect: {
         crossFade: true

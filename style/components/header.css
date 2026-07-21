@@ -49,6 +49,19 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
+.header:not(.scrolled) .reading-progress {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.header.scrolled .reading-progress {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
 /*Есть недочеты с прогресс-баром*/
 /* Он виден сквозь менюшку бургер! */
 .header:has(.hamburger.is-active) .reading-progress {
