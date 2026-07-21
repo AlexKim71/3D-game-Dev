@@ -1,0 +1,28 @@
+.scrollToTopBtn {
+  background-color: var(--orange-500);
+  border: none;
+  border-radius: var( --radius-full);
+  color: var(--white);
+  cursor: pointer;
+  width: 56px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.scrollToTopBtn svg {
+  transform: scale(1.1);
+  transform: rotate(-90deg);
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}

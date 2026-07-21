@@ -1,13 +1,13 @@
 :root {
   /* COLORS */
+  --color-accent: #FA9021;
   --white: #FFFFFF;
   --orange-600: #DC7000;
   --orange-500: #FA9021;
   --orange-700: #E47500;
-  
-  
+  --start-orange: #FEA250;
+  --orange: #FF7C32;
   --hover-btn-effect: #a02604;
-  
   --black-900: #000000;
   --black-850: #070707;
   --black-800: #1C140F;
@@ -15,8 +15,10 @@
   --green-500: #2FAB73;
   --gray-500: #4F5665;
   --purple-500: #9921C3;
+  --blue: #2351F5;
   --red-300: #FF8484;
   --gray-900: #333333;
+  --gray-contact-form: #4F4F4F;
 
   /* GRADIENTS & BACKGROUNDS */
   --grad-orange-10: rgba(220, 66, 0, 0.11);
@@ -24,10 +26,17 @@
   --grad-green-10: rgba(0, 220, 141, 0.11);
   --overlay-dark-65: rgba(0, 0, 0, 0.65);
   --background-blur: blur(12px);
+  --background-form: rgba(28, 20, 15, 1);
+  --gradient-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
+  --gradient-background1: #010101;
+  --gradient-background2: linear-gradient(180deg, #090501 0%, #120A01 100%);
+  --header-bg: rgba(18, 18, 18, 0.75); /* Полупрозрачный черный фон */
+  --header-blur: blur(12px); /* Матовое стекло */
+
 
   /*Header*/
   --header-container: 1321px;
-  --header-height: 45px;
+  --header-height: 43px;
   --header-padding-x: 15px;
 
   /*Footer*/
@@ -40,6 +49,14 @@
   --container-second: 1188px;
   --container-third: 1146px;
   --container-fourth: 1045px;
+  --container-about-hero: 1470px;
+  --container-about-why: 1220px;
+  --container-contact-us: 1060px;
+  --container-form: 1440px;
+  --container-news-section: 1277px;
+  --container-services-hero: 1140px;
+  --container-services-video-feature: 1200px;
+  --container-services-slider: 1300px;
 
   /* Border Radius */
   --radius-xl: 40px;
@@ -52,9 +69,11 @@
   --radius-y: 5px;
   --radius-full: 50%;
   
-  /*Ooutline*/
+  /*Outline*/
   --outline: 2px dashed currentColor;
   --outline-offset: 3px;
+  --outline-focus-style: 2px solid var(--orange-500);
+  --outline-focus-offset: 2px;
 
   /* BORDERS */
   --border-light-gray: 0.8px solid #D2D2D2;
@@ -68,7 +87,14 @@
   /*HEIGHTS & LINE-HEIGHTS*/
   --button-height: 53px;
   --line-height-main: 187%;
-
+  --line-height-second: 200%;
+  --line-height-third: 208%;
+  --line-height-fourth: 180%;
+  --line-height-fifth: 189%;
+  --line-height-six: 207%;
+  --line-height-seven: 30%;
+  --Vertical-margins-for-the-slider1: 22px;
+  --Vertical-margins-for-the-slider2: 51px;
 
   /* FONTS */
   --font-family-primary: "Poppins", sans-serif;
@@ -76,6 +102,7 @@
 
   /*ANIMATION*/
   --transition-duration: 0.2s;
+  --transition-smooth: 0.4s cubic-bezier(0.33, 1, 0.68, 1);
   --scrollbar-width: 0px;
 
   /*Z-INDEX*/
@@ -83,5 +110,7 @@
   --z-index-menu: 201;
   --z-index-header: 200;
   --z-index-image-spider-man: 25;
+  --z-index-hamburger: 1000;
+  --ver-value: 69%;
 
 }

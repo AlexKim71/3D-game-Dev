@@ -1,0 +1,35 @@
+.services-swiper {
+  width: 100%;
+  max-width: 1300px;
+}
+
+.swiper-button-prev {
+  transform: rotate(180deg);
+}
+
+.swiper-button-prev > button,
+.swiper-button-next > button {
+  border: none;
+  background: transparent;
+  color: var(--white);
+}
+
+.swiper-pagination {
+  padding-bottom: 10px;
+  pointer-events: none;
+}
+
+.services-swiper-slide {
+  min-height: 245px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: static;
+  margin: 0;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}

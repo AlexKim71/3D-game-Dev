@@ -1,11 +1,18 @@
-
 .main-nav__link:focus,
 .header-logo:focus,
 .contact-us:focus {
   outline: none;
 }
 
+.footer-column li a:active {
+  text-decoration: underline;
+  color: var(--orange-500);
+  transition: var(--transition-duration);
+}
+
 /* Удаление светлого фона при нажатии на сенсорных устройствах */
+.swiper-button-prev,
+.swiper-button-next,
 .main-nav__link,
 .header-logo,
 .contact-us,
@@ -35,14 +42,16 @@
 }
 /*Навигация по меню шапки спомощью Tab+Shift(Для Доступности)*/
 
-
-
-
-
-
 /*При нажатии на эти элементы отрабатывает эффект*/
 .main-nav__link:active {
-  color: #CECECE;  
+  color: var(--orange-500);
+}
+
+.stat-icon:active svg path,
+.stat-icon:active {
+  fill: var(--white);
+  background-color: var(--orange-600);
+  transition: var(--transition-duration);
 }
 
 .contact-us:active {
@@ -53,8 +62,25 @@
   opacity: 0.7;
 }
 
+.services-pagination-bullet:not(.services-pagination-bullet-active):active {
+  background-color: var(--orange-500);
+}
+
 .footer-copyright:active {
   color: var(--orange-700);
+}
+
+.services-slider__btn:active,
+.services-slider__btn:active svg path {
+  background-color: var(--orange-600);
+  color: white;
+  fill: white;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background-color: var(--orange-500);
+  border-radius: var(--radius-md);
 }
 
 .footer-soc1als-link:active svg path,
@@ -74,25 +100,25 @@
 }
 
 .services-card-link:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .projects-card:active {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 .projects-card-link:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .projects-see-all-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
 }
 
 /*Эмуляция :active на сенсорных устройствах через класс .is-active*/
 .main-nav__link.is-active {
-  color: #CECECE;
+  color: #cecece;
 }
 
 .contact-us.is-active {
@@ -162,11 +188,8 @@
 }
 
 .projects-newsletter-button:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
 }
 
-
 /*Эмуляция :active на сенсорных устройствах через класс .is-active*/
-
-

@@ -22,16 +22,15 @@
 }
 
 
-
 .presentation-text {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(0.625rem, 0.359rem + 0.99vw, 1.25rem);
     max-width: 545px;
 }
 
 .presentation-subtitle {
-    font-size: 30px;
+    font-size: clamp(1.25rem, 0.984rem + 0.99vw, 1.875rem);
     font-weight: 600;
     line-height: var(--line-height-main);
 }
@@ -58,7 +57,7 @@
     content: "";
     background-image: url("../../images/grid.png");
     position: absolute;
-    top: -17%;
+    top: -14%;
     right: clamp(20px, 5vw, 196px);
     width: 196px;
     height: 154px;

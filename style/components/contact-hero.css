@@ -1,0 +1,119 @@
+.contact-hero {
+    padding: 6.25rem 0 9.188rem 0;
+}
+
+.contact-hero-container {
+    max-width: 1070px;
+    margin-inline: auto;
+}
+
+.contact-hero-breadcrumbs-list li:last-child {
+    color: var(--orange-500);
+}
+
+.contact-hero-title {
+    max-width: 58.875rem;
+    margin: 0 auto 0.813rem auto;
+    text-align: center;
+    font-size: 33px;
+    line-height: var(--line-height-fourth);
+    font-weight: 600;
+}
+
+.contact-hero-subtitle {
+    margin: 0 auto;
+    max-width: 38.063rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: var(--line-height-fourth);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.contact-hero-map {
+    margin: 5.813rem 0 3.875rem;
+}
+
+.contact-hero-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.contact-hero-meta {
+    max-width: 1188px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0 auto;
+    padding-inline: 1rem;
+}
+
+.contact-hero-meta .contact-hero-meta-item--social {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-hero-meta-item--phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.contact-hero-meta-item--address {
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 1.188rem;
+}
+
+.contact-hero-meta-item--address p {
+    max-width: 19.563rem;
+    margin: 0;
+}
+
+.contact-hero-meta-item {
+    min-height: 86px;
+    display: flex;
+    padding-inline: 1.5rem;
+    border-right: var(--border-white);
+}
+
+.contact-hero-meta-item:last-child {
+    border-right: 0;
+}
+
+.contact-hero-meta-title {
+    font-size: 18px;
+}
+
+.contact-hero-social-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 1rem;
+}
+
+.contact-hero-social-link {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hero-social-link img {
+    filter: brightness(0) invert(1);
+}
+
+.contact-hero-meta-item--phone a,
+.contact-hero-meta-item--address p {
+    overflow-wrap: anywhere;
+}
+
+
+

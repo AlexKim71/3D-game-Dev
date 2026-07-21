@@ -1,0 +1,15 @@
+.news-newsletter-form .newsletter-container {
+    padding: 73px 0 148px 0;
+}
+
+.news-newsletter-form {
+    max-width: calc(var(--container-news-section) + var(--header-padding-x) * 2);
+    padding-inline: var(--header-padding-x);
+    margin: 0 auto;
+    display: flex;
+    justify-content: left;
+}
+
+.news-newsletter-form > .newsletter-container {
+    width: var(--container-second);
+}

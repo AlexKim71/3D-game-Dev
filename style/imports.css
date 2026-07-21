@@ -4,6 +4,7 @@
 @import url("./main.css");
 @import url("./animations.css");
 @import url("./components/presentation.css");
+@import url("./components/scroll-to-top.css");
 @import url("./components/trending-games.css");
 @import url("./components/services.css");
 @import url("./components/projects.css");
@@ -11,6 +12,26 @@
 @import url("./components/footer.css");
 @import url("./components/header.css");
 @import url("./components/burgermenu.css");
+@import url("./components/newsletter.css");
+@import url("./components/smartheader.css");
+@import url("./components/about-hero.css");
+@import url("./components/about-why.css");
+@import url("./components/about-feature.css");
+@import url("./components/about-team.css");
+@import url("./components/about-feature-newsletter.css");
+@import url("./components/contact-hero.css");
+@import url("./components/contact-form.css");
+@import url("./components/swiper-slider.css");
+@import url("./components/contact-newslatter.css");
+@import url("./components/news-hero.css");
+@import url("./components/services-showcase.css");
+@import url("./components/news-newsletter-form.css");
+@import url("./components/news-section.css");
+@import url("./components/services-hero.css");
+@import url("./components/services-video-feature.css");
+@import url("./components/services-slider.css");
+@import url("./components/hamburgers.css");
 @import url("./accessibility.css");
 @import url("./responsive.css");
+
 

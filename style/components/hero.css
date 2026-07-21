@@ -1,49 +1,47 @@
 .hero {
   min-height: 512px;
-  margin-top: 109px;
+  margin-top: 120px;
   margin-bottom: 178px;
-  position: relative;
-  overflow: visible;
-  overflow-x: clip;
-  position: relative;
+  z-index: 10;
 }
 
-.hero::before {
-  content: "";
+.hero-visual {
+  position: relative;
+  margin-left: 98px;
+  flex: 1 0 455px;
+}
+
+.hero-visual > [alt='joystick'] {
   position: absolute;
-  inset: 0;
-  /* Syntax: url() no-repeat X-position Y-position / Size */
-  background:
-          url('../../images/cryengine.png') no-repeat left 51.75rem top 0 / 6.3125rem 6.1875rem,
-          url('../../images/unreal.png') no-repeat left 73rem top 0 / 3.6875rem 4rem,
-          url('../../images/unity.png') no-repeat left 44rem bottom 17.3125rem / 6rem 1.875rem;
+  inset: -46% -3%;
+  object-fit: cover;
+  pointer-events: none;
+  width: 100%;
+  height: auto;
 }
 
+.hero-visual > [alt='cryengine'] {
+  position: absolute;
+  inset: -2% 15%;
+}
+.hero-visual > [alt='unity'] {
+  position: absolute;
+  inset: 3% 79%;
+}
+.hero-visual > [alt='unreal'] {
+  position: absolute;
+  inset: 32% -25%;
+}
 
 .hero-container {
-  position: relative;
-  overflow: visible;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-
-
-.hero-container::after {
-  content: "";
-  position: absolute;
-  top: -42%;
-  left: 642px;
-  width: 806px;
-  height: 761px;
-  background: url("/images/joy_stick.png") no-repeat;
-  background-size: contain;
-  z-index: -1;
+  flex-direction: row;
+  min-height: 552px;
 }
 
 .hero-content {
-  max-width: 527px;
+  flex: 1 0 527px;
+  line-height: var(--line-height-second);
 }
 
 .hero-label {

@@ -1,17 +1,3 @@
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-   z-index: var(--z-index-header);
-}
-
-.header.scrolled {
-  backdrop-filter: blur(10px);
-  padding-top: 0;
-}
-
 .contact-us {
   display: inline-flex;
   align-items: center;
@@ -35,16 +21,106 @@
 .main-nav__link {
   line-height: 24px;
   position: relative;
+  z-index: 2;
+  padding: 15px 20px;
+  margin: -15px -20px;
   -webkit-tap-highlight-color: transparent;
+}
+
+.header {
+  background-color: #1d191900;
+  transition:
+    transform var(--transition-smooth),
+    background-color var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+
+  will-change: transform;
+  z-index: var(--z-index-header);
+}
+
+.header.scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--header-bg);
+  backdrop-filter: var(--header-blur);
+  -webkit-backdrop-filter: var(--header-blur);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/*Есть недочеты с прогресс-баром*/
+/* Он виден сквозь менюшку бургер! */
+.header:has(.hamburger.is-active) .reading-progress {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.reading-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: var(--color-accent);
+  width: 0%;
+  transition: width 0.1s ease-out;
+  z-index: 2;
+}
+
+.header.header-hidden {
+  transform: translateY(calc(-100% + 3px));
+  box-shadow: none;
 }
 
 .header-container {
   max-width: calc(var(--header-container) + var(--header-padding-x) * 2);
   padding-inline: var(--header-padding-x);
-  margin-top: 2.75rem;
-  justify-content: space-between;
   margin-inline: auto;
   display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: var(--header-height);
+  margin-top: 42px;
+  margin-bottom: 20px;
+  margin: 2.625rem auto  2.813rem auto;
+  transition: margin 0.4s ease;
+}
+
+.header.scrolled .header-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-nav__link {
+  position: relative;
+  transition: var(--transition-duration);
+}
+
+.main-nav__link::before {
+  content: '';
+  position: absolute;
+  width: 31px;
+  height: 4px;
+  background-color: currentColor;
+  top: 87%;
+  left: 0;
+  pointer-events: none;
+  border-radius: 20px;
+
+  transform-origin: 100% 50%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s;
+}
+
+.main-nav__link:hover,
+.main-nav__link.active {
+  color: #fa9021;
+}
+
+.main-nav__link:hover::before,
+.main-nav__link.active::before {
+  transform-origin: 0% 50%;
+  transform: scale3d(1, 1, 1);
 }
 
 .main-nav {

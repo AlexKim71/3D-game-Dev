@@ -1,203 +1,465 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Контакты | 3D Game Dev Studio - Свяжитесь с нами</title>
-        <meta
-                name="description"
-                content="Свяжитесь с 3D Game Dev Studio. Обсудим ваш проект, ответим на вопросы. Телефон, email, форма обратной связи. Начните разработку игры уже сегодня!"
-        />
-        <meta
-                name="keywords"
-                content="контакты студии, связаться с нами, форма обратной связи, заказать разработку игры, консультация геймдев"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://your-domain.com/contact-us.html" />
-        <meta property="og:title" content="Контакты - 3D Game Dev Studio" />
-        <meta
-                property="og:description"
-                content="Свяжитесь с нами для обсуждения вашего проекта. Мы всегда рады новым идеям!"
-        />
-        <meta property="og:image" content="https://your-domain.com/img/og-contact.jpg" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Контакты - 3D Game Dev Studio" />
-        <meta
-                property="twitter:description"
-                content="Начните создание вашей игры мечты. Свяжитесь с нами прямо сейчас!"
-        />
-        <meta property="twitter:image" content="https://your-domain.com/img/og-contact.jpg" />
-        <link rel="icon" type="image/png" href="img/favicon.png" />
-         <link rel="stylesheet" href="style/imports.css" />
-        <script src="./scripts/burger-toggle.js" defer></script>
-        <script src="./scripts/scrollbarWidth.js" defer></script>
-    </head>
-    <body>
-        <header class="header">
-            <div class="header-container">
-                <div class="logo">
-                    <a class="header-logo" href="home.html">
-                        <img
-                                class="header-logo-image"
-                                src="./logos/logo.svg"
-                                alt="3D Game Dev Studio Logo"
-                                width="82"
-                                height="45"
-                        />
-                    </a>
-                </div>
-
-                <div class="header-actions">
-                    <nav class="main-nav" aria-label="Основная навигация">
-                        <ul class="main-nav__list">
-                            <li class="main-nav__item">
-                                <a href="home.html" class="main-nav__link">Home</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="about-us.html" class="main-nav__link">About us</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="services.html" class="main-nav__link">Services</a>
-                            </li>
-                            <li class="main-nav__item">
-                                <a href="news.html" class="main-nav__link">News</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <a href="contact-us.html" class="contact-us main-nav__link--active" title="Связаться с нами" aria-label="Связаться с нами" aria-current="page">Contact us</a>
-                </div>
-
-                <button class="hamburger hamburger--slider" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-                </button>
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Контакты | 3D Game Dev Studio - Свяжитесь с нами</title>
+    <meta
+      name="description"
+      content="Свяжитесь с 3D Game Dev Studio. Обсудим ваш проект, ответим на вопросы. Телефон, email, форма обратной связи. Начните разработку игры уже сегодня!" />
+    <meta
+      name="keywords"
+      content="контакты студии, связаться с нами, форма обратной связи, заказать разработку игры, консультация геймдев" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/contact-us.html" />
+    <meta property="og:title" content="Контакты - 3D Game Dev Studio" />
+    <meta
+      property="og:description"
+      content="Свяжитесь с нами для обсуждения вашего проекта. Мы всегда рады новым идеям!" />
+    <meta property="og:image" content="https://your-domain.com/img/og-contact.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Контакты - 3D Game Dev Studio" />
+    <meta property="twitter:description" content="Начните создание вашей игры мечты. Свяжитесь с нами прямо сейчас!" />
+    <meta property="twitter:image" content="https://your-domain.com/img/og-contact.jpg" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="shortcut icon" href="./favicons/favicon_32x32.ico" type="image/x-icon" />
+    <link rel="icon" href="./favicons/favicon_32x32.svg" type="image/svg+xml" />
+    <link rel="icon" href="./favicons/favicon_32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="./favicons/favicon_48x48.png" sizes="48x48" type="image/png" />
+    <link rel="icon" href="./favicons/Android_Chrome_192x192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="./favicons/iPhone_180x180.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="style/imports.css" />
+    <script src="./scripts/burger-toggle.js" defer></script>
+    <script src="./scripts/navigation.js" defer></script>
+    <script src="./scripts/scroll-to-top.js" defer></script>
+    <script src="./scripts/sticky-header.js" defer></script>
+  </head>
+  <body>
+    <div class="bg-wrapper3">
+      <header class="header" data-header>
+        <div class="reading-progress" data-progress></div>
+        <div class="header-container">
+          <div class="logo">
+            <a class="header-logo" href="home.html" aria-label="Contact page">
+              <img
+                class="header-logo-image"
+                src="./logos/logo.svg"
+                alt="3D Game Dev Studio Logo"
+                width="82"
+                height="45" />
+            </a>
+          </div>
+          <div class="header-actions">
+            <nav class="main-nav" aria-label="Main Information">
+              <ul class="main-nav__list" aria-label="Main Navigation">
+                <li class="main-nav__item">
+                  <a href="home.html" class="main-nav__link">Home</a>
+                  <div class="nav-underline">
+                    <span class="underline-line"></span>
+                    <span class="underline-dot"></span>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="about-us.html" class="main-nav__link">About us</a>
+                  <div class="nav-underline">
+                    <span class="underline-line"></span>
+                    <span class="underline-dot"></span>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="services.html" class="main-nav__link">Portfolio</a>
+                  <div class="nav-underline">
+                    <span class="underline-line"></span>
+                    <span class="underline-dot"></span>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a href="news.html" class="main-nav__link">News</a>
+                  <div class="nav-underline">
+                    <span class="underline-line"></span>
+                    <span class="underline-dot"></span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+            <a
+              href="contact-us.html"
+              class="contact-us main-nav__link--active"
+              title="Contact with us"
+              aria-label="Contact with us"
+              aria-current="page"
+              >Contact us</a
+            >
+          </div>
+          <button class="hamburger hamburger--vortex-r" type="button" aria-label="Open mobile menu">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <div class="wrapper">
+            <svg class="transition" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <path
+                class="path"
+                stroke="#000000"
+                fill="#fcc42a"
+                vector-effect="non-scaling-stroke"
+                d="M 0 100 L 0 100 100 100 100 100 C 50 100, 50 100, 0 100"></path>
+            </svg>
+            <div class="menu">
+              <nav aria-label="Mobile navigation">
+                <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="about-us.html">About us</a></li>
+                  <li><a href="services.html">Portfolio</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="contact-us.html">Contact us</a></li>
+                </ul>
+              </nav>
             </div>
-        </header>
-        <main></main>
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-top">
-                    <header class="footer-header">
-                        <div class="logo">
-                            <a class="header-logo" href="home.html">
-                                <img
-                                        class="header-logo-image"
-                                        src="./logos/logo.svg"
-                                        alt="3D Game Dev Studio Logo"
-                                        width="68"
-                                        height="37"
-                                />
-                            </a>
-                        </div>
-                        <p class="footer-description description">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
-                        <span>@Logo</span>
-                    </header>
-                    <div class="footer-body">
-                        <div class="footer-column">
-                            <h2 class="footer-column-title">About us</h2>
-                            <nav>
-                                <ul>
-                                    <li>
-                                        <a href="about-us.html">About us</a>
-                                    </li>
-                                    <li>
-                                        <a href="services.html">Services</a>
-                                    </li>
-                                    <li>
-                                        <a href="news.html">News</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact-us.html">Contact us</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="footer-column">
-                            <h2 class="footer-column-title">Contact us</h2>
-                            <p class="footer-contact-info description">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            </p>
-                            <a href="tel:+90889097890" title="Позвонить нам">+908 89097 890</a>
-                        </div>
-                        <div class="footer-soc1als">
-                            <ul class="footer-soc1als-list">
-                                <li class="footer-soc1als-item">
-                                    <a class="footer-soc1als-link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.9985 1.9925H9.094V0.0845C8.905 0.0585 8.255 0 7.498 0C5.91851 0 4.83651 0.9935 4.83651 2.8195V4.5H3.09351V6.633H4.83651V12H6.97351V6.6335H8.646L8.9115 4.5005H6.97301V3.031C6.97351 2.4145 7.1395 1.9925 7.9985 1.9925Z" fill="black" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="footer-soc1als-item">
-                                    <a class="footer-soc1als-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
-                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_311)">
-                                                <path d="M9.481 0H3.51898C1.57858 0 0 1.57858 0 3.51898V9.4811C0 11.4214 1.57858 13 3.51898 13H9.4811C11.4214 13 13 11.4214 13 9.4811V3.51898C13 1.57858 11.4214 0 9.481 0V0ZM12.2379 9.4811C12.2379 11.0012 11.0012 12.2379 9.481 12.2379H3.51898C1.99881 12.2379 0.762114 11.0012 0.762114 9.4811V3.51898C0.762114 1.99881 1.99881 0.762114 3.51898 0.762114H9.4811C11.0012 0.762114 12.2379 1.99881 12.2379 3.51898V9.4811Z" fill="black" />
-                                                <path d="M6.49989 2.94531C4.53986 2.94531 2.94531 4.53986 2.94531 6.49989C2.94531 8.45993 4.53986 10.0545 6.49989 10.0545C8.45993 10.0545 10.0545 8.45993 10.0545 6.49989C10.0545 4.53986 8.45993 2.94531 6.49989 2.94531ZM6.49989 9.29236C4.96019 9.29236 3.70743 8.03969 3.70743 6.49989C3.70743 4.96019 4.96019 3.70743 6.49989 3.70743C8.03969 3.70743 9.29236 4.96019 9.29236 6.49989C9.29236 8.03969 8.03969 9.29236 6.49989 9.29236Z" fill="black" />
-                                                <path d="M10.1394 1.68311C9.56023 1.68311 9.08911 2.15432 9.08911 2.73344C9.08911 3.31266 9.56023 3.78388 10.1394 3.78388C10.7187 3.78388 11.1899 3.31266 11.1899 2.73344C11.1899 2.15422 10.7187 1.68311 10.1394 1.68311ZM10.1394 3.02166C9.98056 3.02166 9.85122 2.89233 9.85122 2.73344C9.85122 2.57445 9.98056 2.44522 10.1394 2.44522C10.2984 2.44522 10.4278 2.57445 10.4278 2.73344C10.4278 2.89233 10.2984 3.02166 10.1394 3.02166Z" fill="black" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1_311">
-                                                    <rect width="13" height="13" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="contact-hero" aria-labelledby="contact-hero-title">
+          <div class="contact-hero-container">
+            <nav class="about-hero-breadcrumbs breadcrumbs-contact-hero" aria-label="Breadcrumb">
+              <ol class="about-hero-breadcrumbs-list">
+                <li class="about-hero-breadcrumbs-item">
+                  <a href="home.html">Home</a>
+                </li>
+                <li class="about-hero-breadcrumbs-item" aria-hidden="true">&nbsp;&nbsp; &gt;</li>
+                <li class="about-hero-breadcrumbs-item" aria-current="page">&nbsp; Contact us</li>
+              </ol>
+            </nav>
 
-                                    </a>
-                                </li>
-                                <li class="footer-soc1als-item">
-                                    <a class="footer-soc1als-link" href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter">
-                                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_318)">
-                                                <path
-                                                        d="M13 2.46919C12.5166 2.68125 12.0014 2.82181 11.4644 2.89006C12.0169 2.56019 12.4386 2.04181 12.6368 1.417C12.1217 1.72412 11.5529 1.94106 10.9468 2.06213C10.4577 1.54131 9.76056 1.21875 9.00006 1.21875C7.52456 1.21875 6.33669 2.41638 6.33669 3.88456C6.33669 4.09581 6.35456 4.29894 6.39844 4.49231C4.18275 4.38425 2.22219 3.32231 0.905125 1.70463C0.675187 2.10356 0.540313 2.56019 0.540313 3.05175C0.540313 3.97475 1.01562 4.79294 1.72413 5.26662C1.29594 5.2585 0.875875 5.13419 0.52 4.93837C0.52 4.9465 0.52 4.95706 0.52 4.96762C0.52 6.26275 1.44381 7.3385 2.65525 7.58631C2.43831 7.64563 2.20187 7.67406 1.9565 7.67406C1.78587 7.67406 1.61362 7.66431 1.45194 7.62856C1.79725 8.684 2.77713 9.45994 3.94225 9.48512C3.0355 10.1944 1.88419 10.6218 0.637812 10.6218C0.41925 10.6218 0.209625 10.6121 0 10.5852C1.18056 11.3466 2.57969 11.7812 4.0885 11.7812C8.99275 11.7812 11.674 7.71875 11.674 4.19737C11.674 4.07956 11.6699 3.96581 11.6643 3.85287C12.1932 3.4775 12.6376 3.00869 13 2.46919Z" fill="black"
-                                                />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1_318">
-                                                    <rect width="13" height="13" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
+            <h1 id="contact-hero-title" class="contact-hero-title">
+              Lorem Ipsum is simply dummy text of the printing and.
+            </h1>
+            <p class="contact-hero-subtitle">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <figure class="contact-hero-map">
+              <img
+                src="./images/Huge Global.svg"
+                alt="Global coverage map with office points"
+                width="1060"
+                height="538"
+                loading="lazy" />
+            </figure>
+          </div>
+          <div class="contact-hero-meta" aria-label="Contact information">
+            <div class="contact-hero-meta-item contact-hero-meta-item--social">
+              <p class="contact-hero-meta-title">Follow us</p>
+              <ul class="contact-hero-social-list" aria-label="Social links">
+                <li>
+                  <a
+                    class="contact-hero-social-link"
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Facebook">
+                    <img src="./icons/facebook.svg" alt="" width="12" height="12" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="contact-hero-social-link"
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Instagram">
+                    <img src="./icons/instagram.svg" alt="" width="13" height="13" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="contact-hero-social-link"
+                    href="https://www.twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Twitter">
+                    <img src="./icons/twitter.svg" alt="" width="13" height="13" aria-hidden="true" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="contact-hero-social-link"
+                    href="https://www.linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="LinkedIn">
+                    <img src="./icons/linkedin.svg" alt="" width="11" height="11" aria-hidden="true" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="contact-hero-meta-item contact-hero-meta-item--phone">
+              <img src="./icons/phone 1.svg" alt="" width="30" height="30" aria-hidden="true" />
+              <a href="tel:+9444455556">+94 4444 5555 6</a>
+            </div>
+            <div class="contact-hero-meta-item contact-hero-meta-item--address">
+              <img src="./icons/location2.svg" alt="" width="19" height="28" aria-hidden="true" />
+              <p>but also the leap into electronic typesetting</p>
+            </div>
+          </div>
+        </section>
+        <div class="bg">
+          <section class="contact-form-section" aria-labelledby="contact-form-title">
+            <div class="contact-form-section-container">
+              <header class="contact-form-header">
+                <h2 id="contact-form-title" class="contact-form-title">Say hello</h2>
+                <p class="contact-form-subtitle">Lorem Ipsum is simply dummy text of the printing.</p>
+              </header>
 
-                                    </a>
-                                </li>
-                                <li class="footer-soc1als-item">
-                                    <a class="footer-soc1als-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_325)">
-                                                <path d="M10.9973 11V10.9996H11.0001V6.96531C11.0001 4.99173 10.5752 3.47144 8.26795 3.47144C7.15879 3.47144 6.41445 4.0801 6.11058 4.65714H6.07849V3.65569H3.89087V10.9996H6.16879V7.36314C6.16879 6.40569 6.35029 5.47985 7.536 5.47985C8.70429 5.47985 8.7217 6.57252 8.7217 7.42456V11H10.9973Z" fill="black" />
-                                                <path d="M0.181396 3.65601H2.46206V10.9999H0.181396V3.65601Z" fill="black" />
-                                                <path d="M1.32092 0C0.591708 0 0 0.591708 0 1.32092C0 2.05013 0.591708 2.65421 1.32092 2.65421C2.05013 2.65421 2.64183 2.05013 2.64183 1.32092C2.64138 0.591708 2.04967 0 1.32092 0V0Z" fill="black" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1_325">
-                                                    <rect width="11" height="11" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+              <form class="contact-form" aria-label="Contact form">
+                <div class="contact-form-row">
+                  <div class="contact-form-field">
+                    <label for="contact-first-name" class="contact-form-label">First Name</label>
+                    <input
+                      id="contact-first-name"
+                      name="firstName"
+                      type="text"
+                      class="contact-form-input"
+                      autocomplete="given-name"
+                      required
+                      inputmode="text"
+                      placeholder=" " />
+                  </div>
+                  <div class="contact-form-field">
+                    <label for="contact-last-name" class="contact-form-label">Last Name</label>
+                    <input
+                      id="contact-last-name"
+                      name="lastName"
+                      type="text"
+                      class="contact-form-input"
+                      autocomplete="family-name"
+                      required
+                      inputmode="text"
+                      placeholder=" " />
+                  </div>
                 </div>
-            </div>
-            <div class="footer-extra">
-                <div class="footer-extra-inner">
-                    <div class="footer-copyright">
-                        Copyright &reg; <time datetime="2021">2021</time>
-                        Lorem All rights Reserved.
-                    </div>
+
+                <div class="contact-form-field">
+                  <label for="contact-email" class="contact-form-label">Email Address</label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    class="contact-form-input"
+                    autocomplete="email"
+                    required
+                    inputmode="email"
+                    placeholder=" " />
                 </div>
+
+                <div class="contact-form-field">
+                  <label for="contact-message" class="contact-form-label">Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    class="contact-form-textarea"
+                    required
+                    inputmode="text"
+                    placeholder=" "></textarea>
+                </div>
+
+                <div class="contact-form-actions">
+                  <button type="submit" class="contact-form-submit btn-1">Get in touch</button>
+                </div>
+              </form>
             </div>
-        </footer>
-    </body>
+          </section>
+        </div>
+        <section class="contact-newslatter" aria-labelledby="contact-newsletter">
+          <div class="newsletter-container container-second">
+            <header class="newsletter-about-brief-header">
+              <h2 class="newsletter-about-brief-title">Lorem Ipsum</h2>
+              <p class="newsletter-about-brief-description description">
+                Lorem ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </header>
+            <div class="newsletter-content">
+              <header class="newsletter-header">
+                <h2 class="newsletter-title">Stay in the loop</h2>
+                <p class="newsletter-description description-2">
+                  Subscribe to receive the latest news and updates about TDA. We promise not to spam you!
+                </p>
+              </header>
+              <form class="newsletter-form" aria-label="Newsletter subscription form">
+                <div class="newsletter-form-group">
+                  <input
+                    type="email"
+                    class="newsletter-input"
+                    placeholder="Enter email address"
+                    required
+                    aria-label="Email address"
+                    inputmode="email"
+                    autocomplete="email" />
+                  <button type="submit" class="newsletter-button" aria-label="Subscribe to newsletter">Continue</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <header class="footer-header">
+            <div class="logo">
+              <a class="header-logo" href="home.html">
+                <img
+                  class="header-logo-image"
+                  src="./logos/logo.svg"
+                  alt="3D Game Dev Studio Logo"
+                  width="68"
+                  height="37" />
+              </a>
+            </div>
+            <p class="footer-description description">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <span>@Logo</span>
+          </header>
+          <div class="footer-body">
+            <div class="footer-column">
+              <h2 class="footer-column-title">About us</h2>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="about-us.html">About us</a>
+                  </li>
+                  <li>
+                    <a href="services.html">Services</a>
+                  </li>
+                  <li>
+                    <a href="news.html">News</a>
+                  </li>
+                  <li>
+                    <a href="contact-us.html">Contact us</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h2 class="footer-column-title">Contact us</h2>
+              <p class="footer-contact-info description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+              <a href="tel:+90889097890" title="Позвонить нам">+908 89097 890</a>
+            </div>
+            <div class="footer-soc1als">
+              <ul class="footer-soc1als-list">
+                <li class="footer-soc1als-item">
+                  <a
+                    class="footer-soc1als-link"
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Facebook">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.9985 1.9925H9.094V0.0845C8.905 0.0585 8.255 0 7.498 0C5.91851 0 4.83651 0.9935 4.83651 2.8195V4.5H3.09351V6.633H4.83651V12H6.97351V6.6335H8.646L8.9115 4.5005H6.97301V3.031C6.97351 2.4145 7.1395 1.9925 7.9985 1.9925Z"
+                        fill="black" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-soc1als-item">
+                  <a
+                    class="footer-soc1als-link"
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Instagram">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1_311)">
+                        <path
+                          d="M9.481 0H3.51898C1.57858 0 0 1.57858 0 3.51898V9.4811C0 11.4214 1.57858 13 3.51898 13H9.4811C11.4214 13 13 11.4214 13 9.4811V3.51898C13 1.57858 11.4214 0 9.481 0V0ZM12.2379 9.4811C12.2379 11.0012 11.0012 12.2379 9.481 12.2379H3.51898C1.99881 12.2379 0.762114 11.0012 0.762114 9.4811V3.51898C0.762114 1.99881 1.99881 0.762114 3.51898 0.762114H9.4811C11.0012 0.762114 12.2379 1.99881 12.2379 3.51898V9.4811Z"
+                          fill="black" />
+                        <path
+                          d="M6.49989 2.94531C4.53986 2.94531 2.94531 4.53986 2.94531 6.49989C2.94531 8.45993 4.53986 10.0545 6.49989 10.0545C8.45993 10.0545 10.0545 8.45993 10.0545 6.49989C10.0545 4.53986 8.45993 2.94531 6.49989 2.94531ZM6.49989 9.29236C4.96019 9.29236 3.70743 8.03969 3.70743 6.49989C3.70743 4.96019 4.96019 3.70743 6.49989 3.70743C8.03969 3.70743 9.29236 4.96019 9.29236 6.49989C9.29236 8.03969 8.03969 9.29236 6.49989 9.29236Z"
+                          fill="black" />
+                        <path
+                          d="M10.1394 1.68311C9.56023 1.68311 9.08911 2.15432 9.08911 2.73344C9.08911 3.31266 9.56023 3.78388 10.1394 3.78388C10.7187 3.78388 11.1899 3.31266 11.1899 2.73344C11.1899 2.15422 10.7187 1.68311 10.1394 1.68311ZM10.1394 3.02166C9.98056 3.02166 9.85122 2.89233 9.85122 2.73344C9.85122 2.57445 9.98056 2.44522 10.1394 2.44522C10.2984 2.44522 10.4278 2.57445 10.4278 2.73344C10.4278 2.89233 10.2984 3.02166 10.1394 3.02166Z"
+                          fill="black" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_311">
+                          <rect width="13" height="13" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-soc1als-item">
+                  <a
+                    class="footer-soc1als-link"
+                    href="https://www.twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Twitter">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1_318)">
+                        <path
+                          d="M13 2.46919C12.5166 2.68125 12.0014 2.82181 11.4644 2.89006C12.0169 2.56019 12.4386 2.04181 12.6368 1.417C12.1217 1.72412 11.5529 1.94106 10.9468 2.06213C10.4577 1.54131 9.76056 1.21875 9.00006 1.21875C7.52456 1.21875 6.33669 2.41638 6.33669 3.88456C6.33669 4.09581 6.35456 4.29894 6.39844 4.49231C4.18275 4.38425 2.22219 3.32231 0.905125 1.70463C0.675187 2.10356 0.540313 2.56019 0.540313 3.05175C0.540313 3.97475 1.01562 4.79294 1.72413 5.26662C1.29594 5.2585 0.875875 5.13419 0.52 4.93837C0.52 4.9465 0.52 4.95706 0.52 4.96762C0.52 6.26275 1.44381 7.3385 2.65525 7.58631C2.43831 7.64563 2.20187 7.67406 1.9565 7.67406C1.78587 7.67406 1.61362 7.66431 1.45194 7.62856C1.79725 8.684 2.77713 9.45994 3.94225 9.48512C3.0355 10.1944 1.88419 10.6218 0.637812 10.6218C0.41925 10.6218 0.209625 10.6121 0 10.5852C1.18056 11.3466 2.57969 11.7812 4.0885 11.7812C8.99275 11.7812 11.674 7.71875 11.674 4.19737C11.674 4.07956 11.6699 3.96581 11.6643 3.85287C12.1932 3.4775 12.6376 3.00869 13 2.46919Z"
+                          fill="black" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_318">
+                          <rect width="13" height="13" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-soc1als-item">
+                  <a
+                    class="footer-soc1als-link"
+                    href="https://www.linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="LinkedIn">
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1_325)">
+                        <path
+                          d="M10.9973 11V10.9996H11.0001V6.96531C11.0001 4.99173 10.5752 3.47144 8.26795 3.47144C7.15879 3.47144 6.41445 4.0801 6.11058 4.65714H6.07849V3.65569H3.89087V10.9996H6.16879V7.36314C6.16879 6.40569 6.35029 5.47985 7.536 5.47985C8.70429 5.47985 8.7217 6.57252 8.7217 7.42456V11H10.9973Z"
+                          fill="black" />
+                        <path d="M0.181396 3.65601H2.46206V10.9999H0.181396V3.65601Z" fill="black" />
+                        <path
+                          d="M1.32092 0C0.591708 0 0 0.591708 0 1.32092C0 2.05013 0.591708 2.65421 1.32092 2.65421C2.05013 2.65421 2.64183 2.05013 2.64183 1.32092C2.64138 0.591708 2.04967 0 1.32092 0V0Z"
+                          fill="black" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_325">
+                          <rect width="11" height="11" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-extra">
+        <div class="footer-extra-inner">
+          <div class="footer-copyright">
+            Copyright &reg;
+            <time datetime="2021">2021</time>
+            Lorem All rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button type="button" class="scrollToTopBtn" aria-label="Вернуться в начало страницы">
+      <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.25 7.50156H16.075L11.5375 2.05157C11.3253 1.79629 11.2232 1.46719 11.2537 1.13666C11.2842 0.806128 11.4447 0.501239 11.7 0.289065C11.9553 0.0768921 12.2844 -0.0251853 12.6149 0.00528938C12.9454 0.035764 13.2503 0.196295 13.4625 0.451565L19.7125 7.95156C19.7545 8.01122 19.7922 8.07389 19.825 8.13907C19.825 8.20157 19.825 8.23907 19.9125 8.30157C19.9692 8.44489 19.9988 8.59745 20 8.75156C19.9988 8.90568 19.9692 9.05824 19.9125 9.20156C19.9125 9.26406 19.9125 9.30157 19.825 9.36407C19.7922 9.42924 19.7545 9.49191 19.7125 9.55157L13.4625 17.0516C13.345 17.1927 13.1978 17.3061 13.0314 17.3839C12.8651 17.4617 12.6836 17.5019 12.5 17.5016C12.2079 17.5021 11.9249 17.4004 11.7 17.2141C11.5734 17.1091 11.4688 16.9803 11.3921 16.8348C11.3154 16.6894 11.2682 16.5303 11.2531 16.3665C11.238 16.2028 11.2553 16.0377 11.3041 15.8807C11.3529 15.7237 11.4322 15.5779 11.5375 15.4516L16.075 10.0016H1.25C0.91848 10.0016 0.600536 9.86987 0.366116 9.63545C0.131695 9.40103 0 9.08309 0 8.75156C0 8.42004 0.131695 8.1021 0.366116 7.86768C0.600536 7.63326 0.91848 7.50156 1.25 7.50156Z" fill="white"/>
+      </svg>
+    </button>
+  </body>
 </html>

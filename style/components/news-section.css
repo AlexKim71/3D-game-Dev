@@ -1,0 +1,128 @@
+.news-section-container {
+    max-width: calc(var(--container-news-section) + var(--header-padding-x) * 2);
+    padding-inline: var(--header-padding-x);
+    margin-inline: auto;
+
+}
+
+.news-section-layout {
+    display: flex;
+    flex-direction: row;
+    column-gap: 72px;
+}
+
+.news-section-main {
+    flex-basis: 587px;
+    max-width: 100%;
+}
+
+.news-section-aside {
+    flex-basis: 618px;
+    max-width: 100%;
+    display: flex;
+    row-gap: 3.75rem;
+    flex-direction: column;
+}
+
+.news-card-author {
+    width: 138px;
+    height: 40px;
+    font-size: 14px;
+    letter-spacing: 0;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: var(--line-height-main);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-card-author::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            45deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.3) 50%, transparent 60%);
+    top: -100%;
+    left: -100%;
+    transition: all 0.5s ease;
+}
+
+.news-section img {
+    clip-path: inset(0 round 20px);;
+}
+
+.news-card-media img {
+    width: 100%;
+    height: 295px;
+    display: block;
+    object-fit: cover;
+    object-position: 1% 1%;
+    margin-bottom: 1.313rem;
+}
+
+.news-card-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card--compact .news-card-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 31px;
+}
+
+.news-card-meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1rem;
+    padding-bottom: 23px;
+}
+
+.news-card-link .news-card-title {
+    font-size: 23px;
+}
+
+.news-card-title {
+    font-size: 30px;
+    font-weight: 600;
+    max-width: 34.5rem;
+    margin-bottom: 32px;
+}
+
+.news-card-description {
+    line-height: var(--line-height-six);
+    font-weight: 400;
+    font-size: 1.063rem;
+    max-width: 33.125rem;
+}
+
+.news-card-description:first-child {
+    margin-bottom: 2.75rem;
+    color: red;
+}
+
+.news-card-time {
+    font-size: 0.875rem;
+    line-height: var(--line-height-main);
+    font-weight: 400;
+}
+
+.news-section-main .news-card:not(:first-child) {
+    padding-top: 5.625rem;
+}
+
+.news-section-main .news-card {
+    padding-bottom: 5.625rem;
+}
+
+.news-section-main .news-card:first-child {
+    border-bottom: var(--border-gray-md);
+}

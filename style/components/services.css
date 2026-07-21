@@ -47,26 +47,33 @@
 .services-subtitle {
     font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1rem);
     opacity: 0.8;
-    max-width: 700px;
+    max-width: 820px;
     margin-inline: auto;
     margin-bottom: 99px;
+    line-height: var(--line-height-main);
 }
 
 .services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 100px;
-    justify-items: center;
-    list-style: none;
-    padding-bottom: 92px;
+    grid-template-areas:
+    "card1 card2 card3 card4"
+    ".     card5 card6 .    ";
+    /*grid-template-columns: repeat(4, 1fr);*/
+    gap: clamp(0rem, -3.074rem + 7.72vw, 3.875rem) clamp(0rem, -4.958rem + 12.45vw, 6.25rem);
+    margin-bottom: 92px;
 }
 
-.services-item {
-    width: 100%;
-    max-width: 220px;
-}
+.services-item:nth-child(1) { grid-area: card1; }
+.services-item:nth-child(2) { grid-area: card2; }
+.services-item:nth-child(3) { grid-area: card3; }
+.services-item:nth-child(4) { grid-area: card4; }
+.services-item:nth-child(5) { grid-area: card5; }
+.services-item:nth-child(6) { grid-area: card6; }
 
-
+/*.services-item {*/
+/*    width: 100%;*/
+/*    max-width: 220px;*/
+/*}*/
 
 .services-card-icon {
     display: flex;
@@ -89,6 +96,7 @@
     font-size: clamp(0.75rem, 0.679rem + 0.36vw, 1rem);
     margin: 30px 0px 25px 0px;
     line-height: var(--line-height-main);
+    white-space: nowrap;
 }
 
 .services-card-link {
@@ -101,14 +109,17 @@
 .services-card-link::before {
     content: "";
     position: absolute;
-    /* Увеличиваем зону на 20px во все стороны */
     inset: -20px;
+}
+
+.services-card-link svg path {
+    fill: var(--orange-500);
 }
 
 
 .services-card-link:hover svg path {
-    fill: var(--orange-700);
-    transform: scale(1.1);
+    fill: var(--white);
+    /* transform: scale(1.1);*/
     width: 23px;
 }
 
