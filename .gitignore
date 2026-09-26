@@ -1,0 +1,8 @@
+# Local IDE and editor settings
+.idea/
+.vscode/
+
+# OS-generated system files
+Thumbs.db
+Desktop.ini
+.DS_Store

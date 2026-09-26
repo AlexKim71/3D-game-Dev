@@ -21,32 +21,28 @@
     <meta property="og:image" content="https://your-domain.com/img/og-home.jpg" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="3D Game Dev Studio - Главная" />
-    <meta
-      property="twitter:description"
-      content="Ведущая студия разработки 3D игр. Воплощаем ваши идеи в реальность." />
+    <meta property="twitter:description" content="Ведущая студия разработки 3D игр. Воплощаем ваши идеи в реальность." />
     <meta property="twitter:image" content="https://your-domain.com/img/og-home.jpg" />
-    <link rel="shortcut icon" href="./favicons/favicon_32x32.ico" type="image/x-icon" />
-    <link rel="icon" href="./favicons/favicon_32x32.svg" type="image/svg+xml" />
-    <link rel="icon" href="./favicons/favicon_32x32.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="./favicons/favicon_48x48.png" sizes="48x48" type="image/png" />
-    <link rel="icon" href="./favicons/Android_Chrome_192x192.png" sizes="192x192" type="image/png" />
-    <link rel="apple-touch-icon" href="./favicons/iPhone_180x180.png" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="style/imports.css" />
-    <script src="./scripts/burger-toggle.js" defer></script>
-    <script src="./scripts/navigation.js" defer></script>
-    <script src="./scripts/scroll-to-top.js" defer></script>
-    <script src="./scripts/sticky-header.js" defer></script>
+    <link rel="icon" href="src/assets/favicons/favicon_32x32.svg" type="image/svg+xml" />
+    <link rel="icon" href="src/assets/favicons/favicon_32x32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="src/assets/favicons/iPhone_180x180.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="src/style/imports.css" />
+    <link rel="stylesheet" href="src/style/swiper-bundle.min.css" />
+    <script src="src/scripts/burger-toggle.js" defer></script>
+    <script src="src/scripts/navigation.js" defer></script>
+    <script src="src/scripts/scroll-to-top.js" defer></script>
+    <script src="src/scripts/sticky-header.js" defer></script>
   </head>
   <body>
     <header class="header" data-header>
       <div class="reading-progress" data-progress></div>
       <div class="header-container">
         <div class="logo">
-          <a class="header-logo" href="home.html" aria-label="Home page">
+          <a class="header-logo" href="index.html" aria-label="Home page">
             <img
               class="header-logo-image"
-              src="./logos/logo.svg"
+              src="src/assets/logos/logo.svg"
               alt="3D Game Dev Studio Logo"
               width="82"
               height="45" />
@@ -56,20 +52,20 @@
           <nav class="main-nav" aria-label="Main Navigation">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="home.html" class="main-nav__link main-nav__link--active" aria-current="page">Home</a>
+                <a href="index.html" class="main-nav__link main-nav__link--active" aria-current="page">Home</a>
               </li>
               <li class="main-nav__item">
-                <a href="about-us.html" class="main-nav__link">About us</a>
+                <a href="src/pages/about-us.html" class="main-nav__link">About us</a>
               </li>
               <li class="main-nav__item">
-                <a href="services.html" class="main-nav__link">Portfolio</a>
+                <a href="src/pages/services.html" class="main-nav__link">Portfolio</a>
               </li>
               <li class="main-nav__item">
-                <a href="news.html" class="main-nav__link">News</a>
+                <a href="src/pages/news.html" class="main-nav__link">News</a>
               </li>
             </ul>
           </nav>
-          <a href="contact-us.html" class="contact-us" title="Связаться с нами" aria-label="Contact Us">Contact us</a>
+          <a href="src/pages/contact-us.html" class="contact-us" title="Связаться с нами" aria-label="Contact Us">Contact us</a>
         </div>
         <button class="hamburger hamburger--vortex-r" type="button" aria-label="Open mobile menu">
           <span class="hamburger-box">
@@ -84,11 +80,11 @@
           <div class="menu">
             <nav aria-label="Mobile navigation">
               <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about-us.html">About us</a></li>
-                <li><a href="services.html">Portfolio</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="contact-us.html">Contact us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="src/pages/about-us.html">About us</a></li>
+                <li><a href="src/pages/services.html">Portfolio</a></li>
+                <li><a href="src/pages/news.html">News</a></li>
+                <li><a href="src/pages/contact-us.html">Contact us</a></li>
               </ul>
             </nav> 
           </div>
@@ -109,10 +105,10 @@
               <a href="services.html" class="hero-btn btn-1" title="Get more details">Get more details</a>
             </div>
             <div class="hero-visual">
-              <img src="./images/joystick_1.png" alt="joystick" loading="lazy" />
-              <img src="./images/cryengine.png" alt="cryengine" width="101" height="99" loading="lazy" />
-              <img src="./images/unity.png" alt="unity" width="96" height="30" loading="lazy" />
-              <img src="./images/unreal.png" alt="unreal" width="59" height="64" loading="lazy" />
+              <img src="src/assets/images/joystick_1.png" alt="joystick" loading="lazy" />
+              <img src="src/assets/images/cryengine.png" alt="cryengine" width="101" height="99" loading="lazy" />
+              <img src="src/assets/images/unity.png" alt="unity" width="96" height="30" loading="lazy" />
+              <img src="src/assets/images/unreal.png" alt="unreal" width="59" height="64" loading="lazy" />
             </div>
           </div>
         </section>
@@ -135,7 +131,7 @@
                   <h3 id="trending-game-1-title" class="visually-hidden">God of War style action game</h3>
                   <img
                     class="trending-game-card-image"
-                    src="./images/1.png"
+                    src="src/assets/images/1.png"
                     alt="Fantasy warriors standing in battle"
                     width="251"
                     height="277"
@@ -169,7 +165,7 @@
                   <h3 id="trending-game-2-title" class="visually-hidden">Neon fantasy character game</h3>
                   <img
                     class="trending-game-card-image"
-                    src="./images/2.png"
+                    src="src/assets/images/2.png"
                     alt="Female character in neon blue and purple effects"
                     width="251"
                     height="277"
@@ -203,7 +199,7 @@
                   <h3 id="trending-game-3-title" class="visually-hidden">Military shooter game</h3>
                   <img
                     class="trending-game-card-image"
-                    src="./images/3.png"
+                    src="src/assets/images/3.png"
                     alt="Soldier firing a weapon in combat"
                     width="251"
                     height="277"
@@ -237,7 +233,7 @@
                   <h3 id="trending-game-4-title" class="visually-hidden">Cyberpunk city game</h3>
                   <img
                     class="trending-game-card-image"
-                    src="./images/4.png"
+                    src="src/assets/images/4.png"
                     alt="Neon-lit cyberpunk city street at night"
                     width="251"
                     height="277"
@@ -283,7 +279,7 @@
               </div>
               <div class="presentation-video">
                 <img
-                  src="./images/spider-men.jpg"
+                  src="src/assets/images/spider-men.jpg"
                   alt="Game presentation video thumbnail"
                   width="1146"
                   height="462"
@@ -311,7 +307,7 @@
               <article class="services-card">
                 <div class="services-card-icon">
                   <img
-                    src="./icons/phone-circle.svg"
+                    src="src/assets/icons/phone-circle.svg"
                     alt="Mobile Game Development"
                     width="64"
                     height="64"
@@ -334,7 +330,7 @@
             <li class="services-item">
               <article class="services-card">
                 <div class="services-card-icon">
-                  <img src="./icons/pc-circle.svg" alt="PC Game Development" width="64" height="64" loading="lazy" />
+                  <img src="src/assets/icons/pc-circle.svg" alt="PC Game Development" width="64" height="64" loading="lazy" />
                 </div>
                 <h3 class="services-card-title">PC Game Development</h3>
                 <a href="services.html" class="services-card-link" aria-label="Learn more about PC Game Development">
@@ -350,7 +346,7 @@
             <li class="services-item">
               <article class="services-card">
                 <div class="services-card-icon">
-                  <img src="./icons/ps4-circle.svg" alt="PS4 Game Development" width="64" height="64" loading="lazy" />
+                  <img src="src/assets/icons/ps4-circle.svg" alt="PS4 Game Development" width="64" height="64" loading="lazy" />
                 </div>
                 <h3 class="services-card-title">PS4 Game Development</h3>
                 <a href="services.html" class="services-card-link" aria-label="Learn more about PS4 Game Development">
@@ -366,7 +362,7 @@
             <li class="services-item">
               <article class="services-card">
                 <div class="services-card-icon">
-                  <img src="./icons/virtual-circle.svg" alt="AR/VR Solutions" width="64" height="64" loading="lazy" />
+                  <img src="src/assets/icons/virtual-circle.svg" alt="AR/VR Solutions" width="64" height="64" loading="lazy" />
                 </div>
                 <h3 class="services-card-title">AR/VR Solutions</h3>
                 <a href="services.html" class="services-card-link" aria-label="Learn more about AR/VR Solutions">
@@ -382,7 +378,7 @@
             <li class="services-item">
               <article class="services-card">
                 <div class="services-card-icon">
-                  <img src="./icons/3d-circle.svg" alt="AR/VR design" width="64" height="64" loading="lazy" />
+                  <img src="src/assets/icons/3d-circle.svg" alt="AR/VR design" width="64" height="64" loading="lazy" />
                 </div>
                 <h3 class="services-card-title">AR/VR design</h3>
                 <a href="services.html" class="services-card-link" aria-label="Learn more about AR/VR design">
@@ -398,7 +394,7 @@
             <li class="services-item">
               <article class="services-card">
                 <div class="services-card-icon">
-                  <img src="./icons/engine-circle.svg" alt="3D Modelings" width="64" height="64" loading="lazy" />
+                  <img src="src/assets/icons/engine-circle.svg" alt="3D Modelings" width="64" height="64" loading="lazy" />
                 </div>
                 <h3 class="services-card-title">3D Modelings</h3>
                 <a href="services.html" class="services-card-link" aria-label="Learn more about 3D Modelings">
@@ -426,7 +422,7 @@
                 <div class="projects-item">
                   <article class="projects-card">
                     <img
-                      src="./images/computer-club.png"
+                      src="src/assets/images/computer-club.png"
                       alt="Gaming computer setup with blue lighting"
                       width="382"
                       height="223"
@@ -455,7 +451,7 @@
                 <div class="projects-item">
                   <article class="projects-card">
                     <img
-                      src="./images/gamer.png"
+                      src="src/assets/images/gamer.png"
                       alt="Gaming tournament interview setup"
                       width="382"
                       height="223"
@@ -484,7 +480,7 @@
                 <div class="projects-item">
                   <article class="projects-card">
                     <img
-                      src="./images/game_set_up.png"
+                      src="src/assets/images/game_set_up.png"
                       alt="Modern gaming arcade machines"
                       width="352"
                       height="223"
@@ -515,7 +511,7 @@
                 <div class="projects-item">
                   <article class="projects-card">
                     <img
-                      src="./images/play-has-no-limits.png"
+                      src="src/assets/images/play-has-no-limits.png"
                       alt="Professional gaming studio office"
                       width="246"
                       height="223"
@@ -544,7 +540,7 @@
                 <div class="projects-item">
                   <article class="projects-card">
                     <img
-                      src="./images/retro-game-club.png"
+                      src="src/assets/images/retro-game-club.png"
                       alt="Gaming computer club setup"
                       width="401"
                       height="223"
@@ -573,7 +569,7 @@
                 <div class="projects-item">
                   <article class="projects-card">
                     <img
-                      src="./images/game-automats.png"
+                      src="src/assets/images/game-automats.png"
                       alt="Retro gaming club with vintage machines"
                       width="469"
                       height="223"
@@ -647,7 +643,7 @@
               <a class="header-logo" href="home.html">
                 <img
                   class="header-logo-image"
-                  src="./logos/logo.svg"
+                  src="src/assets/logos/logo.svg"
                   alt="3D Game Dev Studio Logo"
                   width="82"
                   height="45" />

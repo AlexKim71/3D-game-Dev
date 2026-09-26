@@ -55,7 +55,7 @@
 
 .presentation-video::after {
     content: "";
-    background-image: url("../../images/grid.png");
+    background-image: url("../../assets/images/grid.png");
     position: absolute;
     top: -14%;
     right: clamp(20px, 5vw, 196px);

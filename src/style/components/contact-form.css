@@ -11,7 +11,7 @@
     inset: 85% 0;
     width: 35.438rem;
     height: 16rem;
-    background: url("../../images/v4.svg") no-repeat center/contain;
+    background: url("../../assets/images/v4.svg") no-repeat center/contain;
     pointer-events: none;
     z-index: 1;
 }
@@ -22,7 +22,7 @@
     inset: 0 28%;
     width: 65.5rem;
     height: 16.563rem;
-    background: url("../../images/v3.svg") no-repeat center/contain;
+    background: url("../../assets/images/v3.svg") no-repeat center/contain;
     pointer-events: none;
     z-index: 1;
 }
