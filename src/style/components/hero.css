@@ -1,47 +1,50 @@
 .hero {
-  min-height: 512px;
-  margin-top: 120px;
-  margin-bottom: 178px;
+  min-height: min(100dvh, 513px);
   z-index: 10;
-}
-
-.hero-visual {
-  position: relative;
-  margin-left: 98px;
-  flex: 1 0 455px;
-}
-
-.hero-visual > [alt='joystick'] {
-  position: absolute;
-  inset: -46% -3%;
-  object-fit: cover;
-  pointer-events: none;
-  width: 100%;
-  height: auto;
-}
-
-.hero-visual > [alt='cryengine'] {
-  position: absolute;
-  inset: -2% 15%;
-}
-.hero-visual > [alt='unity'] {
-  position: absolute;
-  inset: 3% 79%;
-}
-.hero-visual > [alt='unreal'] {
-  position: absolute;
-  inset: 32% -25%;
 }
 
 .hero-container {
   display: flex;
   flex-direction: row;
-  min-height: 552px;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 120px;
+  /* margin-bottom: 178px; */
 }
 
 .hero-content {
-  flex: 1 0 527px;
-  line-height: var(--line-height-second);
+  min-height: 100%;
+  /* max-width: 527px; */
+}
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  max-width: 455px;
+}
+
+img[alt="joystick"] {
+  width: 100%;
+  height: auto; 
+  display: block;
+  transform: translate(-8%, -33%);
+}
+
+.hero-visual img:not(:first-child) {
+  position: absolute;
+  aspesct-ratio: 1/1;
+}
+
+img[alt="unreal"] {
+  inset: -5% 71%;
+}
+
+img[alt="unity"] {
+  inset: 6% -18%;
+}
+
+img[alt="cryengine"] {
+  inset: 57% 31%;
 }
 
 .hero-label {
@@ -57,6 +60,7 @@
   font-weight: 700;
   line-height: 155%;
   margin-bottom: 26px;
+  max-width: 479px;
 }
 
 .hero-description {

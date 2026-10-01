@@ -1,7 +1,6 @@
 
 .footer-extra {
   border-top: var(--border-light-gray);
-  text-align: center;
   padding-block: 29px;
   font-size: 13px;
 }
@@ -88,6 +87,8 @@
 
 .footer-copyright {
   -webkit-tap-highlight-color: transparent;
+  width: fit-content;
+  margin-inline: auto;
 }
 
 

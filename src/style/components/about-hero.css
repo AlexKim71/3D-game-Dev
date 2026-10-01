@@ -1,6 +1,6 @@
 .about-hero {
-  min-height: calc(100dvh - var(--header-height));
-  /* min-height: 656px; */
+  /* min-height: calc(100dvh - var(--header-height)); */
+  min-height: 656px;
   /* margin: 2.25rem 0 9rem 0;
   background-color: red; */
 }

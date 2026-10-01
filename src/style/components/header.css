@@ -29,11 +29,7 @@
 
 .header {
   background-color: #1d191900;
-  transition:
-    transform var(--transition-smooth),
-    background-color var(--transition-smooth),
-    box-shadow var(--transition-smooth);
-
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
   will-change: transform;
   z-index: var(--z-index-header);
 }
@@ -52,7 +48,7 @@
 .header:not(.scrolled) .reading-progress {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform: translateY(-100%);
 }
 
 .header.scrolled .reading-progress {
@@ -99,10 +95,10 @@
   transition: margin 0.4s ease;
 }
 
-.header.scrolled .header-container {
+/* .header.scrolled .header-container {
   margin-top: 20px;
   margin-bottom: 20px;
-}
+} */
 
 .main-nav__link {
   position: relative;

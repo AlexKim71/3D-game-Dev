@@ -127,6 +127,9 @@
     background-color: var(--orange-700);
   }
 
+  .footer-soc1als-link:hover svg path,
+  .footer-soc1als-link:hover
+
   .trending-game-card-followers:hover svg path,
   .trending-game-card-followers:hover {
     fill: var(--orange-500);
@@ -186,10 +189,6 @@
     min-height: calc(var(--header-height) + 40px);
     position: static;
     margin-block: 0;
-  }
-
-  .hero-container {
-    margin-bottom: 200px;
   }
 
   .header-actions {
@@ -270,12 +269,11 @@
     height: calc(var(--header-height) + 40px);
   }
 
-  .hero-visual > [alt='joystick'] {
-    width: auto;
-    inset: -73% 27%;
+  .hero-visual > [alt='joystick'] { 
+    /* transform: translate(-8%, -33%); */
   }
 
-  .hero-visual > [alt='cryengine'] {
+  /* .hero-visual > [alt='cryengine'] {
     position: absolute;
     inset: -2% 15%;
   }
@@ -286,11 +284,17 @@
   .hero-visual > [alt='unreal'] {
     position: absolute;
     inset: 31% -16%;
+  } */
+
+  .hero-content {
+    margin-bottom: 100px;
   }
 
   .hero-container {
     flex-direction: column-reverse;
-    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .news-newsletter-form .newsletter-container {
@@ -768,7 +772,7 @@
     margin-bottom: 0;
   }
 
-  .hero-visual > [alt='cryengine'] {
+  /* .hero-visual > [alt='cryengine'] {
     inset: -21% 15%;
   }
   .hero-visual > [alt='unity'] {
@@ -776,7 +780,7 @@
   }
   .hero-visual > [alt='unreal'] {
     inset: 75% 43%;
-  }
+  } */
 
   .hamburger {
     display: inline-block;
@@ -916,7 +920,7 @@
 
   .about-us_swiper img {
     width: 100%;
-    height: auto; 
+    height: auto;
     object-fit: contain;
   }
 
@@ -1120,13 +1124,14 @@
     flex: 0 0 362px;
   }
 
+  /*
   .hero-visual > [alt='joystick'] {
     width: 66%;
     height: auto;
     display: block;
     inset: 6% 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
 
   .hero-label {
     font-size: 16px;
@@ -1389,7 +1394,6 @@
 }
 
 @media (max-width: 390px) {
-
   .about-us_swiper {
     width: 100%;
   }
@@ -1402,7 +1406,7 @@
     flex: 1 0 200px;
   }
 
-  .hero-visual > [alt='cryengine'] {
+  /* .hero-visual > [alt='cryengine'] {
     width: 50px;
     height: 49px;
     inset: -13% 18%;
@@ -1424,7 +1428,7 @@
     display: block;
     inset: 3% 54%;
     transform: translate(-50%, -50%);
-  }
+  } */
 
   .services-slider__controls {
     justify-content: space-between;
