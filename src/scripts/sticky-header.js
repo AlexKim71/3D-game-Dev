@@ -1,53 +1,61 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const header = document.querySelector('[data-header]');
-  const progressBar = document.querySelector('[data-progress]');
-  const hamburger = document.querySelector('.hamburger');
+const header = document.getElementById('header');
+const progressBar = document.getElementById('progressBar');
+const headerHeight = header.offsetHeight;
 
-  let lastScrollY = window.scrollY;
-  let ticking = false;
+let lastScrollY = window.scrollY;
+let ticking = false;
+let scrollUpStartPoint = 0;
+const SCROLL_UP_THRESHOLD = 20;
 
-  function updateHeader() {
-    const currentScroll = window.scrollY;
+window.addEventListener('DOMContentLoaded', () => {
+  handleScroll();
+  updateProgressBar();
+});
 
-    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-    if (documentHeight > 0) {
-      const progress = (currentScroll / documentHeight) * 100;
-      progressBar.style.width = `${progress}%`;
-    }
-
-    if (currentScroll <= 0) {
-      header.classList.remove('scrolled', 'header-hidden');
-      lastScrollY = currentScroll;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      handleScroll();
+      updateProgressBar();
       ticking = false;
-      return;
-    }
+    });
+    ticking = true;
+  }
+});
 
-    if (currentScroll > 10) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+function handleScroll() {
+  const currentScrollY = window.scrollY;
 
-    if (Math.abs(currentScroll - lastScrollY) > 5) {
-      if (currentScroll > lastScrollY) {
-        header.classList.add('header-hidden');
-      } else {
-        header.classList.remove('header-hidden');
-      }
-      lastScrollY = currentScroll;
-    }
-
-    ticking = false;
+  if (currentScrollY > 10) {
+    header.classList.add('scrolled');
+    progressBar.style.opacity = '1';
+  } else {
+    header.classList.remove('scrolled');
+    progressBar.style.opacity = '0';
   }
 
-  window.addEventListener(
-    'scroll',
-    () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateHeader);
-        ticking = true;
-      }
-    },
-    { passive: true },
-  );
-});
+  if (currentScrollY <= 0) {
+    header.classList.remove('hidden');
+    scrollUpStartPoint = 0;
+  } else if (currentScrollY > lastScrollY) {
+    if (currentScrollY > headerHeight) {
+      header.classList.add('hidden');
+    }
+    scrollUpStartPoint = currentScrollY;
+  } else if (currentScrollY < lastScrollY) {
+    const scrolledUpAmount = scrollUpStartPoint - currentScrollY;
+    if (scrolledUpAmount > SCROLL_UP_THRESHOLD) {
+      header.classList.remove('hidden');
+    }
+  }
+
+  lastScrollY = currentScrollY;
+}
+
+function updateProgressBar() {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const progress = (scrollTop / scrollHeight) * 100;
+
+  progressBar.style.width = progress + '%';
+}

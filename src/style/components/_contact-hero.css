@@ -52,7 +52,7 @@
 .contact-hero-meta .contact-hero-meta-item--social {
     display: inline-flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
 }
 

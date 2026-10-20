@@ -39,11 +39,13 @@
     <script src="../scripts/sticky-header.js" defer></script>
   </head>
   <body>
-    <header class="header" data-header>
-      <div class="reading-progress" data-progress></div>
+     <header class="smart-header" id="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
       <div class="header-container">
         <div class="logo">
-          <a class="header-logo" href="../../index.html" aria-label="News page">
+          <a class="header-logo" href="../../index.html" aria-label="Home page">
             <img
               class="header-logo-image"
               src="../assets/logos/logo.svg"
@@ -53,10 +55,10 @@
           </a>
         </div>
         <div class="header-actions">
-          <nav class="main-nav" aria-label="Main Information">
+          <nav class="main-nav" aria-label="Main Navigation">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="../../index.html" class="main-nav__link">Home</a>
+                <a href="../../index.html" class="main-nav__link main-nav__link--active" aria-current="page">Home</a>
               </li>
               <li class="main-nav__item">
                 <a href="about-us.html" class="main-nav__link">About us</a>
@@ -65,27 +67,21 @@
                 <a href="services.html" class="main-nav__link">Portfolio</a>
               </li>
               <li class="main-nav__item">
-                <a href="news.html" class="main-nav__link main-nav__link--active" aria-current="page">News</a>
+                <a href="news.html" class="main-nav__link">News</a>
               </li>
             </ul>
           </nav>
-          <a href="contact-us.html" class="contact-us" title="Contact with us" aria-label="Contact with us"
-            >Contact us</a
-          >
+          <a href="contact-us.html" class="contact-us" title="Связаться с нами" aria-label="Contact Us">Contact us</a>
         </div>
         <button class="hamburger hamburger--vortex-r" type="button" aria-label="Open mobile menu">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
-        </button>
+        </button> 
         <div class="wrapper">
           <svg class="transition" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path
-              class="path"
-              stroke="#000000"
-              fill="#fcc42a"
-              vector-effect="non-scaling-stroke"
-              d="M 0 100 L 0 100 100 100 100 100 C 50 100, 50 100, 0 100"></path>
+            <path class="path" stroke="#000000" fill="#fcc42a"  vector-effect="non-scaling-stroke"
+                  d="M 0 100 L 0 100 100 100 100 100 C 50 100, 50 100, 0 100"></path>
           </svg>
           <div class="menu">
             <nav aria-label="Mobile navigation">
@@ -96,7 +92,7 @@
                 <li><a href="news.html">News</a></li>
                 <li><a href="contact-us.html">Contact us</a></li>
               </ul>
-            </nav>
+            </nav> 
           </div>
         </div>
       </div>

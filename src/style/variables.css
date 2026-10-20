@@ -22,10 +22,10 @@
 
   /* GRADIENTS & BACKGROUNDS */
   --grad-orange-10: rgba(220, 66, 0, 0.11);
+  --orange-500-transparent: 
   --grad-purple-10: rgba(176, 0, 220, 0.11);
   --grad-green-10: rgba(0, 220, 141, 0.11);
   --overlay-dark-65: rgba(0, 0, 0, 0.65);
-  --background-blur: blur(12px);
   --background-form: rgba(28, 20, 15, 1);
   --gradient-background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(26,14,1,1) 100%);
   --gradient-background1: #010101;
@@ -38,6 +38,8 @@
   --header-container: 1321px;
   --header-height: 43px;
   --header-padding-x: 15px;
+  --mobile-header-x: 40px;
+  --progress-height: 5px;
 
   /*Footer*/
   --footer-container: 1219px;

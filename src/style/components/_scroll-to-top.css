@@ -1,10 +1,12 @@
 .scrollToTopBtn {
-  background-color: var(--orange-500);
+  background-color: rgba(250, 144, 33, 0.7);
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(6px);
   border: none;
-  border-radius: var( --radius-full);
+  border-radius: var(--radius-full);
   color: var(--white);
   cursor: pointer;
-  width: 56px;
+  width: 70px;
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;

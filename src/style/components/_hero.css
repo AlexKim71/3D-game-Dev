@@ -9,18 +9,17 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 120px;
-  /* margin-bottom: 178px; */
 }
 
 .hero-content {
   min-height: 100%;
-  /* max-width: 527px; */
 }
 
 .hero-visual {
   position: relative;
   width: 100%;
   max-width: 455px;
+  z-index: 1 !important;
 }
 
 img[alt="joystick"] {
@@ -28,6 +27,7 @@ img[alt="joystick"] {
   height: auto; 
   display: block;
   transform: translate(-8%, -33%);
+  pointer-events: none;
 }
 
 .hero-visual img:not(:first-child) {

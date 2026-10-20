@@ -10,6 +10,11 @@
   transition: var(--transition-duration);
 }
 
+.scrollToTopBtn:active {
+  background-color: #FA9021; 
+  transform: scale(0.95);
+}
+
 /* Удаление светлого фона при нажатии на сенсорных устройствах */
 .swiper-button-prev,
 .swiper-button-next,
@@ -29,7 +34,8 @@
 .newsletter-input,
 .newsletter-button,
 .projects-newsletter-input,
-.projects-newsletter-button {
+.projects-newsletter-button,
+.scroll-to-top {
   -webkit-tap-highlight-color: transparent;
 }
 

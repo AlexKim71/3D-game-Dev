@@ -40,11 +40,13 @@
   </head>
   <body>
     <div class="bg-wrapper3">
-      <header class="header" data-header>
-        <div class="reading-progress" data-progress></div>
+      <header class="smart-header" id="header">
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
         <div class="header-container">
           <div class="logo">
-            <a class="header-logo" href="../../index.html" aria-label="Contact page">
+            <a class="header-logo" href="../../index.html" aria-label="Home page">
               <img
                 class="header-logo-image"
                 src="../assets/logos/logo.svg"
@@ -54,44 +56,23 @@
             </a>
           </div>
           <div class="header-actions">
-            <nav class="main-nav" aria-label="Main Information">
-              <ul class="main-nav__list" aria-label="Main Navigation">
+            <nav class="main-nav" aria-label="Main Navigation">
+              <ul class="main-nav__list">
                 <li class="main-nav__item">
-                  <a href="../../index.html" class="main-nav__link">Home</a>
-                  <div class="nav-underline">
-                    <span class="underline-line"></span>
-                    <span class="underline-dot"></span>
-                  </div>
+                  <a href="../../index.html" class="main-nav__link main-nav__link--active" aria-current="page">Home</a>
                 </li>
                 <li class="main-nav__item">
                   <a href="about-us.html" class="main-nav__link">About us</a>
-                  <div class="nav-underline">
-                    <span class="underline-line"></span>
-                    <span class="underline-dot"></span>
-                  </div>
                 </li>
                 <li class="main-nav__item">
                   <a href="services.html" class="main-nav__link">Portfolio</a>
-                  <div class="nav-underline">
-                    <span class="underline-line"></span>
-                    <span class="underline-dot"></span>
-                  </div>
                 </li>
                 <li class="main-nav__item">
                   <a href="news.html" class="main-nav__link">News</a>
-                  <div class="nav-underline">
-                    <span class="underline-line"></span>
-                    <span class="underline-dot"></span>
-                  </div>
                 </li>
               </ul>
             </nav>
-            <a
-              href="contact-us.html"
-              class="contact-us main-nav__link--active"
-              title="Contact with us"
-              aria-label="Contact with us"
-              aria-current="page"
+            <a href="contact-us.html" class="contact-us" title="Связаться с нами" aria-label="Contact Us"
               >Contact us</a
             >
           </div>
@@ -459,7 +440,9 @@
     </footer>
     <button type="button" class="scrollToTopBtn" aria-label="Вернуться в начало страницы">
       <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.25 7.50156H16.075L11.5375 2.05157C11.3253 1.79629 11.2232 1.46719 11.2537 1.13666C11.2842 0.806128 11.4447 0.501239 11.7 0.289065C11.9553 0.0768921 12.2844 -0.0251853 12.6149 0.00528938C12.9454 0.035764 13.2503 0.196295 13.4625 0.451565L19.7125 7.95156C19.7545 8.01122 19.7922 8.07389 19.825 8.13907C19.825 8.20157 19.825 8.23907 19.9125 8.30157C19.9692 8.44489 19.9988 8.59745 20 8.75156C19.9988 8.90568 19.9692 9.05824 19.9125 9.20156C19.9125 9.26406 19.9125 9.30157 19.825 9.36407C19.7922 9.42924 19.7545 9.49191 19.7125 9.55157L13.4625 17.0516C13.345 17.1927 13.1978 17.3061 13.0314 17.3839C12.8651 17.4617 12.6836 17.5019 12.5 17.5016C12.2079 17.5021 11.9249 17.4004 11.7 17.2141C11.5734 17.1091 11.4688 16.9803 11.3921 16.8348C11.3154 16.6894 11.2682 16.5303 11.2531 16.3665C11.238 16.2028 11.2553 16.0377 11.3041 15.8807C11.3529 15.7237 11.4322 15.5779 11.5375 15.4516L16.075 10.0016H1.25C0.91848 10.0016 0.600536 9.86987 0.366116 9.63545C0.131695 9.40103 0 9.08309 0 8.75156C0 8.42004 0.131695 8.1021 0.366116 7.86768C0.600536 7.63326 0.91848 7.50156 1.25 7.50156Z" fill="white"/>
+        <path
+          d="M1.25 7.50156H16.075L11.5375 2.05157C11.3253 1.79629 11.2232 1.46719 11.2537 1.13666C11.2842 0.806128 11.4447 0.501239 11.7 0.289065C11.9553 0.0768921 12.2844 -0.0251853 12.6149 0.00528938C12.9454 0.035764 13.2503 0.196295 13.4625 0.451565L19.7125 7.95156C19.7545 8.01122 19.7922 8.07389 19.825 8.13907C19.825 8.20157 19.825 8.23907 19.9125 8.30157C19.9692 8.44489 19.9988 8.59745 20 8.75156C19.9988 8.90568 19.9692 9.05824 19.9125 9.20156C19.9125 9.26406 19.9125 9.30157 19.825 9.36407C19.7922 9.42924 19.7545 9.49191 19.7125 9.55157L13.4625 17.0516C13.345 17.1927 13.1978 17.3061 13.0314 17.3839C12.8651 17.4617 12.6836 17.5019 12.5 17.5016C12.2079 17.5021 11.9249 17.4004 11.7 17.2141C11.5734 17.1091 11.4688 16.9803 11.3921 16.8348C11.3154 16.6894 11.2682 16.5303 11.2531 16.3665C11.238 16.2028 11.2553 16.0377 11.3041 15.8807C11.3529 15.7237 11.4322 15.5779 11.5375 15.4516L16.075 10.0016H1.25C0.91848 10.0016 0.600536 9.86987 0.366116 9.63545C0.131695 9.40103 0 9.08309 0 8.75156C0 8.42004 0.131695 8.1021 0.366116 7.86768C0.600536 7.63326 0.91848 7.50156 1.25 7.50156Z"
+          fill="white" />
       </svg>
     </button>
   </body>

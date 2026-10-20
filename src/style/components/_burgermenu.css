@@ -1,14 +1,12 @@
 .wrapper {
   position: fixed;
   width: 100vw;
-  left: 0; 
-  top: 0;
-  display: flex;
+  inset: 0 0;
+  display: none;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh + 200px);
   pointer-events: none;
-  /* background-color: red; */
   overflow: hidden;
 }
 

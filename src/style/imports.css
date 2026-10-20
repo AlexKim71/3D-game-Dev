@@ -1,37 +1,59 @@
+/* 1. Browser Reset */
 @import url("./normalize.css");
+
+/* 2. Variables & Fonts (Base Dependencies) */
 @import url("./variables.css");
 @import url("./fonts.css");
+
+/* 3. Base Global Styles (body, h1, a tags) */
 @import url("./main.css");
+
+/* 4. Global UI Elements (Header, Footer, Navigation) */
+@import url("./components/_header.css");
+@import url("./components/_smartheader.css");
+@import url("./components/_burgermenu.css");
+@import url("./components/_hamburgers.css");
+@import url("./components/_footer.css");
+@import url("./components/_scroll-to-top.css");
+
+/* 5. Section Components (Logically grouped by pages) */
+/* Home */
+@import url("./components/_hero.css");
+@import url("./components/_presentation.css");
+@import url("./components/_trending-games.css");
+@import url("./components/_projects.css");
+@import url("./components/_newsletter.css");
+
+/* About Us */
+@import url("./components/_about-hero.css");
+@import url("./components/_about-why.css");
+@import url("./components/_about-feature.css");
+@import url("./components/_about-team.css");
+@import url("./components/_about-feature-newsletter.css");
+
+/* Contact Us */
+@import url("./components/_contact-hero.css");
+@import url("./components/_contact-form.css");
+@import url("./components/_contact-newslatter.css");
+
+/* News */
+@import url("./components/_news-hero.css");
+@import url("./components/_news-section.css");
+@import url("./components/_news-newsletter-form.css");
+
+/* Services / Portfolio */
+@import url("./components/_services-hero.css");
+@import url("./components/_services.css");
+@import url("./components/_services-showcase.css");
+@import url("./components/_services-video-feature.css");
+@import url("./components/_services-slider.css");
+@import url("./components/_swiper-slider.css");
+
+/* 6. Animations (Keyframes & Effect Classes) */
 @import url("./animations.css");
-@import url("./components/presentation.css");
-@import url("./components/scroll-to-top.css");
-@import url("./components/trending-games.css");
-@import url("./components/services.css");
-@import url("./components/projects.css");
-@import url("./components/hero.css");
-@import url("./components/footer.css");
-@import url("./components/header.css");
-@import url("./components/burgermenu.css");
-@import url("./components/newsletter.css");
-@import url("./components/smartheader.css");
-@import url("./components/about-hero.css");
-@import url("./components/about-why.css");
-@import url("./components/about-feature.css");
-@import url("./components/about-team.css");
-@import url("./components/about-feature-newsletter.css");
-@import url("./components/contact-hero.css");
-@import url("./components/contact-form.css");
-@import url("./components/swiper-slider.css");
-@import url("./components/contact-newslatter.css");
-@import url("./components/news-hero.css");
-@import url("./components/services-showcase.css");
-@import url("./components/news-newsletter-form.css");
-@import url("./components/news-section.css");
-@import url("./components/services-hero.css");
-@import url("./components/services-video-feature.css");
-@import url("./components/services-slider.css");
-@import url("./components/hamburgers.css");
+
+/* 7. Utilities & Overrides (Accessibility) */
 @import url("./accessibility.css");
+
+/* 8. Responsiveness (ALWAYS AT THE VERY END) */
 @import url("./responsive.css");
-
-

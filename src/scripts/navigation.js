@@ -1,11 +1,14 @@
-const currentPath = window.location.pathname;
-const navLinks = document.querySelectorAll('.main-nav__link');
+const currentUrl = window.location.href;
+const allLinks = document.querySelectorAll('.main-nav__link, .contact-us');
 
-navLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
+allLinks.forEach(link => {
+  const isIndexPage = currentUrl.endsWith('/') && link.href.endsWith('index.html');
   
-    if (currentPath.includes(linkPath) || (currentPath === '/' && linkPath === 'index.html')) {
-        link.classList.add('active'); 
-        link.classList.add('active');
+  if (link.href === currentUrl || isIndexPage) {
+    if (link.classList.contains('contact-us')) {
+      link.classList.add('main-nav__linkBtn');
+    } else {
+      link.classList.add('active');
     }
+  }
 });

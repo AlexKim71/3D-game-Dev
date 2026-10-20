@@ -25,84 +25,68 @@
   padding: 15px 20px;
   margin: -15px -20px;
   -webkit-tap-highlight-color: transparent;
+  transition: var(--transition-duration);
 }
 
-.header {
-  background-color: #1d191900;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
-  will-change: transform;
-  z-index: var(--z-index-header);
+.main-nav__linkBtn {
+  border: var(--border-orange);
+  background-color: transparent;
+  color: var(--orange-500);
+  font-weight: bold; 
 }
 
-.header.scrolled {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
+.smart-header.scrolled {
   background-color: var(--header-bg);
-  backdrop-filter: var(--header-blur);
-  -webkit-backdrop-filter: var(--header-blur);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-.header:not(.scrolled) .reading-progress {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-100%);
+/* .smart-header:not(.scrolled) {
+  z-index: 0;
+} */
+
+.smart-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--black-900);
+  box-shadow: none;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: var(--z-index-header);
 }
 
-.header.scrolled .reading-progress {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-
-/*Есть недочеты с прогресс-баром*/
-/* Он виден сквозь менюшку бургер! */
-.header:has(.hamburger.is-active) .reading-progress {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.reading-progress {
+.progress-container {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 3px;
-  background-color: var(--color-accent);
-  width: 0%;
-  transition: width 0.1s ease-out;
-  z-index: 2;
+  width: 100%;
+  height: var(--progress-height);
+  background-color: transparent;
 }
 
-.header.header-hidden {
-  transform: translateY(calc(-100% + 3px));
-  box-shadow: none;
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--orange-500);
+  opacity: 0;
+  transition: width 0.1s ease-out, opacity 0.3s ease;
+}
+
+.smart-header.hidden {
+  transform: translateY(calc(-100% + var(--progress-height)));
 }
 
 .header-container {
   max-width: calc(var(--header-container) + var(--header-padding-x) * 2);
   padding-inline: var(--header-padding-x);
-  margin-inline: auto;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   min-height: var(--header-height);
-  margin-top: 42px;
-  margin-bottom: 20px;
-  margin: 2.625rem auto  2.813rem auto;
-  transition: margin 0.4s ease;
-}
-
-/* .header.scrolled .header-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
-} */
-
-.main-nav__link {
-  position: relative;
-  transition: var(--transition-duration);
+  margin-inline: auto;
+  padding-block: 40px;
 }
 
 .main-nav__link::before {
@@ -115,7 +99,6 @@
   left: 0;
   pointer-events: none;
   border-radius: 20px;
-
   transform-origin: 100% 50%;
   transform: scale3d(0, 1, 1);
   transition: transform 0.3s;

@@ -92,6 +92,11 @@
     transition: var(--transition-duration);
   }
 
+  .scrollToTopBtn:hover {
+    background-color: #fa9021; 
+    transform: translateY(-3px); 
+  }
+
   .pointer:hover {
     transform: scale(1.05) rotate(2deg);
     box-shadow: 0 0 15px #646cff50;
@@ -128,9 +133,7 @@
   }
 
   .footer-soc1als-link:hover svg path,
-  .footer-soc1als-link:hover
-
-  .trending-game-card-followers:hover svg path,
+  .footer-soc1als-link:hover .trending-game-card-followers:hover svg path,
   .trending-game-card-followers:hover {
     fill: var(--orange-500);
     color: var(--orange-500);
@@ -185,10 +188,8 @@
     margin-right: 30px;
   }
 
-  .header:not(.scrolled) .header-container {
-    min-height: calc(var(--header-height) + 40px);
-    position: static;
-    margin-block: 0;
+  .wrapper {
+    display: flex;
   }
 
   .header-actions {
@@ -207,6 +208,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-inline: var(--mobile-header-x);
+    padding-block: 20px;
   }
 
   .logo {
@@ -257,6 +260,10 @@
 }
 
 @media (max-width: 1024px) {
+  .scrollToTopBtn {
+    width: 50px;
+  }
+
   .contact-newslatter {
     margin-block: 6.25rem;
   }
@@ -264,27 +271,6 @@
   .about-us_swiper {
     width: calc(100% - (var(--Vertical-margins-for-the-slider2) * 2));
   }
-
-  .header:not(.scrolled) .header-container {
-    height: calc(var(--header-height) + 40px);
-  }
-
-  .hero-visual > [alt='joystick'] { 
-    /* transform: translate(-8%, -33%); */
-  }
-
-  /* .hero-visual > [alt='cryengine'] {
-    position: absolute;
-    inset: -2% 15%;
-  }
-  .hero-visual > [alt='unity'] {
-    position: absolute;
-    inset: 3% 79%;
-  }
-  .hero-visual > [alt='unreal'] {
-    position: absolute;
-    inset: 31% -16%;
-  } */
 
   .hero-content {
     margin-bottom: 100px;
@@ -438,10 +424,6 @@
     display: none;
   }
 
-  .header-container {
-    margin-top: 0;
-  }
-
   .logo {
     display: flex;
     align-items: center;
@@ -543,6 +525,10 @@
     min-height: auto;
     padding: 1.25rem 0;
     border-right: 0;
+    justify-content: center;
+  }
+
+  .contact-hero-meta .contact-hero-meta-item--social {
     justify-content: center;
   }
 
@@ -772,16 +758,6 @@
     margin-bottom: 0;
   }
 
-  /* .hero-visual > [alt='cryengine'] {
-    inset: -21% 15%;
-  }
-  .hero-visual > [alt='unity'] {
-    inset: -11% 65%;
-  }
-  .hero-visual > [alt='unreal'] {
-    inset: 75% 43%;
-  } */
-
   .hamburger {
     display: inline-block;
     margin-left: auto;
@@ -797,6 +773,7 @@
     padding-inline: 15px;
     display: flex;
     align-items: center;
+    padding-block 20px;
   }
 
   .footer-column > nav > ul > li {
@@ -1105,7 +1082,6 @@
     display: block;
   }
 
-  /* Hero extra small screens */
   .hero {
     margin-top: 40px;
     margin-bottom: 60px;
@@ -1123,15 +1099,6 @@
   .hero-visual {
     flex: 0 0 362px;
   }
-
-  /*
-  .hero-visual > [alt='joystick'] {
-    width: 66%;
-    height: auto;
-    display: block;
-    inset: 6% 50%;
-    transform: translate(-50%, -50%);
-  } */
 
   .hero-label {
     font-size: 16px;
@@ -1308,11 +1275,9 @@
     margin: 40px 0 24px;
   }
 
-  .contact-hero-meta .contact-hero-meta-item--social,
-  .contact-hero-meta-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .contact-hero-meta-item--address p {
+    max-width: 200px;
+    text-align: center;
   }
 
   .contact-hero-meta-title {
@@ -1322,11 +1287,6 @@
   .contact-hero-meta-item--phone a,
   .contact-hero-meta-item--address p {
     font-size: 17px;
-  }
-
-  .contact-hero-meta-item--phone,
-  .contact-hero-meta-item--address {
-    column-gap: 0.875rem;
   }
 
   .contact-form-section {
@@ -1405,30 +1365,6 @@
   .hero-visual {
     flex: 1 0 200px;
   }
-
-  /* .hero-visual > [alt='cryengine'] {
-    width: 50px;
-    height: 49px;
-    inset: -13% 18%;
-  }
-  .hero-visual > [alt='unity'] {
-    width: 48px;
-    height: 15px;
-    inset: 9% 79%;
-  }
-  .hero-visual > [alt='unreal'] {
-    width: 30px;
-    height: 32px;
-    inset: 55% 11%;
-  }
-
-  .hero-visual > [alt='joystick'] {
-    width: 51%;
-    height: auto;
-    display: block;
-    inset: 3% 54%;
-    transform: translate(-50%, -50%);
-  } */
 
   .services-slider__controls {
     justify-content: space-between;
@@ -1551,11 +1487,6 @@
 
   .contact-hero-container {
     padding-inline: var(--header-padding-x);
-  }
-
-  .contact-hero-meta-item--address p {
-    max-width: 200px;
-    text-align: center;
   }
 
   .contact-hero-meta-item--address {

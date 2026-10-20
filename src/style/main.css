@@ -13,11 +13,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body:has(.header.scrolled) {
-  padding-top: var(--header-height);
-  margin: 0;
-}
-
 nav,
 ul,
 li {

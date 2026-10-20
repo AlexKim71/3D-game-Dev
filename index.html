@@ -35,8 +35,10 @@
     <script src="src/scripts/sticky-header.js" defer></script>
   </head>
   <body>
-    <header class="header" data-header>
-      <div class="reading-progress" data-progress></div>
+    <header class="smart-header" id="header">
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
       <div class="header-container">
         <div class="logo">
           <a class="header-logo" href="index.html" aria-label="Home page">
@@ -52,7 +54,7 @@
           <nav class="main-nav" aria-label="Main Navigation">
             <ul class="main-nav__list">
               <li class="main-nav__item">
-                <a href="index.html" class="main-nav__link main-nav__link--active" aria-current="page">Home</a>
+                <a href="index.html" class="main-nav__link active" aria-current="page">Home</a>
               </li>
               <li class="main-nav__item">
                 <a href="src/pages/about-us.html" class="main-nav__link">About us</a>
@@ -86,12 +88,13 @@
                 <li><a href="src/pages/news.html">News</a></li>
                 <li><a href="src/pages/contact-us.html">Contact us</a></li>
               </ul>
-            </nav> 
+            </nav>
           </div>
         </div>
       </div>
     </header>
     <main>
+      <h1 class="visually-hidden">3D Game Development Portfolio and Services</h1>
       <div class="bg-wrapper">
         <section class="hero">
           <div class="hero-container container">
@@ -640,7 +643,7 @@
         <div class="footer-top">
           <header class="footer-header">
             <div class="logo">
-              <a class="header-logo" href="home.html">
+              <a class="header-logo" href="index.html">
                 <img
                   class="header-logo-image"
                   src="src/assets/logos/logo.svg"
